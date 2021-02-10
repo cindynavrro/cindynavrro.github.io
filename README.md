@@ -1,2 +1,1 @@
 # cindynavrro.github.io
-#README 
