@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <h1>CUNYFirst<h1>
+        <hr>
+
+
+        <h4>Enter course information to create:</h4>
+        <hr>
+
+        <form action="action_page.js" method="get">
+            <label for="term">Select Term:</label>
+            <select name="term" id="term">
+                <option value="2021summer">2021 Summer</option>
+                <option value="2021fall">2021 Fall</option>
+            </select>
+
+            <br>
+            <label for="department">Select Department:</label>
+            <select name="department" id="department">
+                <option value="art">Art</option>
+                <option value="compSci">Computer Science</option>
+                <option value="math">Mathematicsf</option>
+                <option value="science">Science</option>
+            </select>
+
+            <br>
+            <label for="courseName"><b>Enter Course Name</b></label>
+            <input type="text" placeholder="Course Name" name="courseName" required>
+
+            <br>
+            <label for="courseDescription"><b>Enter Course Description</b></label>
+            <br>
+            <textarea id="courseDescription" name="courseDescription" rows="4" cols="25" ></textarea>
+            <hr>
+
+            <h5>Schedule Selector<h5>
+                <label for="beginTime"><b>Begin Time:</b></label>
+                <input type="date-time" id="beginTime" name="beginTime" placeholder="11:30">
+
+                <label>
+                    <input type="checkbox" checked="checked" name="am"> AM
+                </label>
+                <label>
+                    <input type="checkbox" name="pm"> PM
+                </label>
+
+                &emsp; &emsp;
+
+                <label for="endTime"><b>End Time:</b></label>
+                <input type="date-time" id="endTime" name="endTime" placeholder="1:15">
+
+                <label>
+                    <input type="checkbox" name="am"> AM
+                </label>
+                <label>
+                    <input type="checkbox"  checked="checked" name="pm"> PM
+                </label>
+
+
+                <fieldset>
+                    <legend>Days</legend>
+                    <input type="radio" name="days" value="Monday" id="mon">
+                    <label for="mon">Mon</label>
+
+                    <input type="radio" name="days" value="Tuesday" id="tues">
+                    <label for="tues">Tues</label>
+
+                    <input type="radio" name="days" value="Wednesday" id="wed">
+                    <label for="wed">Wedn</label>
+
+                    <input type="radio" name="days" value="Thursday" id="thurs">
+                    <label for="thurs">Thurs</label>
+
+                    <input type="radio" name="days" value="Friday" id="fri">
+                    <label for="fri">Fri</label>
+
+                    <input type="radio" name="days" value="Saturday" id="sat">
+                    <label for="sat">Sat</label>
+                </fieldset>
+
+                <br>
+                <label for="courseCap">Course Capacity</label>
+                <input type="number" name="capacity" placeholder="30" id="courseCap" step="5" required>
+
+                <br>
+                <button type="button" class="createBtn">Create Course</button>
+</form>
+</body>
+</html>

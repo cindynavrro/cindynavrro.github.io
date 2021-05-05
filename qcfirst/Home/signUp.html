@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up Page</title>
+</head>
+<body>
+<form action="action_page.js" method="get" style="border:1px solid #ccc">
+    <div class="container">
+        <h1>CUNYFirst<h1>
+            <hr>
+
+            <h2>Sign Up</h2>
+            <p>Please provide the following information. </p>
+
+            <label for="firstName"><b>First Name</b></label>
+            <input type="text" placeholder="Enter First Name" name="firstName" required>
+
+            <br>
+            <label for="lastName"><b>Last Name</b></label>
+            <input type="text" placeholder="Enter Last Name" name="lastName" required>
+
+            <br>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <br>
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+            <br>
+
+            <label for="passwordRepeat"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="passwordRepeat" required>
+
+
+            <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+            </label>
+
+            <br>
+            <label>
+                <input type="checkbox" checked="checked" name="teacher" style="margin-bottom:15px"> I am a Professor
+            </label>
+            <label>
+                <input type="checkbox" checked="checked" name="student" style="margin-bottom:15px"> I am a Student
+            </label>
+
+
+
+            <div class="btns">
+                <button type="button" class="cancelbtn">Cancel</button>
+                <button type="submit" class="signupbtn">Sign Up</button>
+            </div>
+    </div>
+</body>
+</html>
