@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Enrollment Page</title>
+</head>
+
+<body>
+
+    <div id="header">
+        <h1>CUNYFIRST</h1>
+        <h2>Student</h2>
+        <div class="container" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
+    <div>
+        <h3>Ready to Enroll?</h3>
+
+        <label for="term">*Term:</label>
+        <select name="term" id="term" autofocus>
+            <option value="term1">Spring 2021</option>
+            <option value="term2">Summer 2021</option>
+            <option value="term3">Fall 2021</option>
+            <option value="term4">Winter 2021</option>
+        </select>
+
+        <label for="department">*Depatment:</label>
+        <select name="department" id="department" autofocus>
+            <option value="cs">Computer Science</option>
+            <option value="math">Mathematics</option>
+            <option value="chem">Chemisty</option>
+            <option value="bio">Biology</option>
+            <option value="history">History</option>
+        </select>
+
+        <label for="course">Course:</label>
+        <input type="text" id="course" name="course">
+
+        <label for="instructor">Course:</label>
+        <input type="text" id="instructor" name="instructor">>
+
+        <button id="enrollSearch">Search</button>
+
+        <table id="classList">
+            <tr>
+                <th>My Class Schedule</th>
+                <th>Day/Time</th>
+                <th>Instructor</th>
+                <th><button id="delete">Delete</button></th>>
+            </tr>
+            <tr>
+                <td>CS355</td>
+                <td>M/W 12:00pm-1:15pm</td>
+                <td>Dave Schoul</td>
+                <th><button id="delete">Delete</button></th>
+            </tr>
+            <tr>
+                <td>CS331</td>
+                <td>T/TH 12:00pm-1:15pm</td>
+                <td>Jessy Jones</td>
+                <th><button id="delete">Delete</button></th>
+            </tr>
+            <tr>
+                <td>CS3205</td>
+                <td>F 12:00pm-3:00pm</td>
+                <td>Nancy Carter</td>
+                <th><button id="delete">Delete</button></th>
+            </tr>
+            <tr>
+                <td>CS313</td>
+                <td>M/W 1:00pm-2:15pm</td>
+                <td>Jerry Tombsome</td>
+                <th><button id="delete">Delete</button></th>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
