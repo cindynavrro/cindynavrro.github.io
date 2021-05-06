@@ -59,20 +59,24 @@ header{
     display: flex;
     justify-content: center;
 }
-.btn{
+.btn {
     background-color: #dc3e49;
     border-radius: none;
     color: white;
     margin-top: 10px;
     font-family: Menlo;
     font-size: 15px;
-    padding:10px 30px;
-    border-radius: 5px;
+    padding: 10px 30px;
+    border-radius: 10px;
 }
 
 .btn:hover{
-    background-color: white;
     color: #dc3e49;
+    box-shadow: inset 400px 0 0 0 white;
+    -webkit-transition: ease-out 0.6s;
+    -moz-transition: ease-out 0.6s;
+    transition: ease-out 0.6s;
+
 }
 
 .signUp-container{

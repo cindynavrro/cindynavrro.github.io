@@ -11,14 +11,58 @@
     font-size: x-large;
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    border-bottom: 3px solid darkred;
 }
 
-form{
+h2{
+    display: flex;
+    justify-content: center;
+}
+
+.main-form{
     display: flex;
     justify-content: center;
     padding: 100px;
+    border:none;
+    background-color: antiquewhite;
 }
 
 .container{
-    border: 1px solid black;
+    border: 5px solid #dc3e49;
+    border-radius: 5px;
+    background-color: white;
+
+}
+.signUp-container{
+    background-color: #dc3e49;
+    padding: 4px;
+    font-size: large;
+    color: white;
+}
+
+.label{
+    display:flex;
+    justify-content: center ;
+}
+
+.input-field {
+    margin-left: 120px;
+    padding: 5px;
+    border: none;
+    border-bottom: 2px solid darkred;
+    text-align: center;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    padding: 10px 30px;
+}
+
+
+.btns input{
+    padding: 10px 15px;
+    margin: 10px;
+    margin-top: -5px;
+    border-radius: 3px;
 }
