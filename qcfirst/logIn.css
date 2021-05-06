@@ -1,3 +1,91 @@
+/*
+Cindy - working on homepage appearance
+ */
+
 body{
-    background: lightgray;
+   font-family: Menlo;
+}
+
+.logo-container {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+    color: white;
+    background-image: linear-gradient(white,lightcoral, #dc3e49, lightcoral,white);
+    border-radius: 5px;
+}
+
+.box-container{
+    background: antiquewhite;
+    box-shadow: 2px 0px 20px #dc3e49;
+    height: auto;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.logIn-container h2 {
+    display: flex;
+    color: #dc3e49;
+    justify-content: center;
+    font-size: xx-large;
+}
+
+.usrName-field{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.psw-field {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+
+}
+
+.logIn-btn{
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    background-color: #dc3e49;
+    border-radius: none;
+    color: white;
+    margin-top: 10px;
+    font-family: Menlo;
+    font-size: 15px;
+    padding:10px 30px;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    background-color: white;
+    color: #dc3e49;
+}
+
+.signUp-container{
+    display: flex;
+    justify-content: center;
+}
+.forgotpsw-container{
+    display: flex;
+    justify-content: center;
+}
+
+.logIn-container input{
+    background-color: antiquewhite;
+    padding: 5px;
+    margin-left: 10px;
+    border: none;
+    border-bottom: 2px solid red;
 }

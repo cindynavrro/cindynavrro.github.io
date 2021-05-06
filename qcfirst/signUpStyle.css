@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+    font-family: Menlo;
+}
+
+.header-ctnr{
+    background-image:linear-gradient(to right,white, lightcoral,#dc3e49,lightcoral, white);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+}
+
+.container{
+    border: 1px solid black;
+}
