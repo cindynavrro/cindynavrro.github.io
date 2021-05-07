@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+    font-family: Menlo;
+    margin: 0;
+}
+
+.header-ctnr{
+    background-image:linear-gradient(to right,white, lightcoral,#dc3e49,lightcoral, white);
+    display: flex;
+    padding: 40px;
+    justify-content: center;
+    font-size: x-large;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    border-bottom: 3px solid darkred;
+}
+
+body{
+    background-color: antiquewhite ;
+}

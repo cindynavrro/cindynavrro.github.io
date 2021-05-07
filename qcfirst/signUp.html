@@ -14,48 +14,48 @@
         <div class="signUp-container">
             <h2>SIGN UP</h2>
         </div>
-            <p>Please provide the following information. </p>
+        <p>Please provide the following information. </p>
 
-            <label class="label" for="firstName"><b>First Name</b></label>
-            <input class="input-field" type="text" placeholder="Enter First Name" name="firstName" required>
+        <label class="label" for="firstName"><b>First Name</b></label>
+        <input class="input-field" type="text" placeholder="Enter First Name" name="firstName" required>
 
-            <label class="label" for="lastName"><b>Last Name</b></label>
-            <input class="input-field"type="text" placeholder="Enter Last Name" name="lastName" required>
-
-
-            <label class="label" for="email"><b>Email</b></label>
-            <input class="input-field"type="text" placeholder="Enter Email" name="email" required>
+        <label class="label" for="lastName"><b>Last Name</b></label>
+        <input class="input-field"type="text" placeholder="Enter Last Name" name="lastName" required>
 
 
-            <label class="label" for="password"><b>Password</b></label>
-            <input class="input-field"type="password" placeholder="Enter Password" name="password" required>
-
-            <label class="label"  for="passwordRepeat"><b>Repeat Password</b></label>
-            <input class="input-field" type="password" placeholder="Repeat Password" name="passwordRepeat" required>
-
-            <br>
-
-            <label>
-                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-            </label>
-
-            <br>
-            <label>
-                <input type="checkbox" checked="checked" name="teacher" style="margin-bottom:15px"> I am a Professor
-            </label>
-            <label>
-                <input type="checkbox" checked="checked" name="student" style="margin-bottom:15px"> I am a Student
-            </label>
+        <label class="label" for="email"><b>Email</b></label>
+        <input class="input-field"type="text" placeholder="Enter Email" name="email" required>
 
 
-            <div class="btns">
-                <form action="logIn.html">
-                    <input type="submit" value="Cancel">
-                </form>
-                <form action="confirmSubmit.html">
-                    <input type=submit value="Sign up">
-                </form>
-            </div>
+        <label class="label" for="password"><b>Password</b></label>
+        <input class="input-field"type="password" placeholder="Enter Password" name="password" required>
+
+        <label class="label"  for="passwordRepeat"><b>Repeat Password</b></label>
+        <input class="input-field" type="password" placeholder="Repeat Password" name="passwordRepeat" required>
+
+        <br>
+<div class="rmb-me">
+        <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+        </label>
+</div>
+        <br>
+        <div class="stud-prof">
+        <label for="choice">I am:</label>
+            <select name="choice" id="choice">
+                <option value="Student">Student</option>
+                <option value="Professor">Professor</option>
+            </select>
+        </div>
+
+        <div class="btns">
+            <form action="confirmSubmit.html">
+                <input class="cnl" type="submit" value="Sign Up">
+            </form>
+            <form action="logIn.html">
+                <input class="signup" type=submit value="Cancel">
+            </form>
+        </div>
     </div>
 </body>
 </html>
