@@ -1,12 +1,10 @@
 #body table tr, td{
     padding: 15px;
-
 }
 
 table {
     border: 2px solid white;
     border-radius: 3px;
-
 }
 
 th {

@@ -4,66 +4,69 @@
     <title>Title</title>
     <meta name="viewport" content="width = device-width, initial scale= 1">
     <link rel="stylesheet" href="myStyle.css">
+    <link rel="stylesheet" href="createCourse.css">
 </head>
 <body>
-<div class="container">
     <div class="header-ctnr">
         <h1>CUNYFirst<h1>
     </div>
-        <hr>
-    <div class="box-container">
+    <div class="title-box">
     <h4>Enter course information to create:</h4>
     </div>
-    <div class="box-container"">
-    <form class="inner-box" action="action_page.js" method="get">
-        <label for="term">Select Term:</label>
-        <select name="term" id="term">
-            <option value="2021summer">2021 Summer</option>
-            <option value="2021fall">2021 Fall</option>
-        </select>
+    <div class="form-cntr">
+        <form method="get">
+            <div class="first-box">
+                <div class="items">
+                    <div class="item-label">
+                        <label for="term">Select Term:</label>
+                        <select class="item-input" name="term" id="term">
+                            <option value="2021summer">2021 Summer</option>
+                            <option value="2021fall">2021 Fall</option>
+                    </select>
+                    </div>
+                <br>
+                    <div class="item-label">
+                        <label class="item-label"for="department">Select Department:</label>
+                        <select class="item-input"name="department" id="department">
+                            <option value="art">Art</option>
+                            <option value="compSci">Computer Science</option>
+                            <option value="math">Mathematicsf</option>
+                            <option value="science">Science</option>
+                        </select>
+                    </div>
+                <br>
+                    <div class="item-label">
+                      <label class="item-label" for="courseName">Enter Course Name:</label>
+                      <input class="item-input" type="text" placeholder="Course Name" name="courseName" id="courseName"required>
+                    </div>
+                <br>
+                <label class="item-label" for="courseDescription">Enter Course Description:</label>
+                <br>
+                <textarea class="item-label" id="courseDescription" name="courseDescription" rows="4" cols="45" ></textarea>
+                </div>
+            </div>
+    <h5>Schedule Selector</h5>
+            <div class="box-cntr2">
+    <label class="checkbox-cntr" for="beginTime">Begin Time:</label>
+    <input class="checkbox-cntr" type="date-time" id="beginTime" name="beginTime" placeholder="11:30">
 
-        <br>
-        <label for="department">Select Department:</label>
-        <select name="department" id="department">
-            <option value="art">Art</option>
-            <option value="compSci">Computer Science</option>
-            <option value="math">Mathematicsf</option>
-            <option value="science">Science</option>
-        </select>
-
-        <br>
-        <label for="courseName"><b>Enter Course Name</b></label>
-        <input type="text" placeholder="Course Name" name="courseName" id="courseName"required>
-
-        <br>
-        <label for="courseDescription"><b>Enter Course Description</b></label>
-        <br>
-        <textarea id="courseDescription" name="courseDescription" rows="4" cols="25" ></textarea>
-
-    </div>
-        <h5>Schedule Selector<h5>
-            <label for="beginTime"><b>Begin Time:</b></label>
-            <input type="date-time" id="beginTime" name="beginTime" placeholder="11:30">
-
-            <label>
-                <input type="checkbox" checked="checked" name="am"> AM
+            <input class="checkbox-cntr" type="checkbox" checked="checked" name="am"> AM
+            <label class="checkbox-cntr">
+                <input class="checkbox-cntr" class="checkbox-cntr" type="checkbox" name="pm"> PM
             </label>
-            <label>
-                <input type="checkbox" name="pm"> PM
-            </label>
+            </div>
 
-            &emsp; &emsp;
-
-            <label for="endTime"><b>End Time:</b></label>
+            <div class="box-cntr2">
+            <label for="endTime">End Time:</label>
             <input type="date-time" id="endTime" name="endTime" placeholder="1:15">
 
-            <label>
+            <label class="checkbox-cntr">
                 <input type="checkbox" name="am"> AM
             </label>
-            <label>
+            <label class="checkbox-cntr">
                 <input type="checkbox"  checked="checked" name="pm"> PM
             </label>
-
+            </div>
 
             <fieldset id="days">
                 <legend>Days</legend>
@@ -86,11 +89,18 @@
                 <label for="sat">Sat</label>
             </fieldset>
 
+        <div style="margin-top: 8px;" class="box-cntr2">
             <br>
             <label for="courseCap">Course Capacity</label>
             <input type="number" name="capacity" placeholder="30" id="courseCap" step="5" required>
             <br>
-                <button type="button" class="createBtn">Create Course</button>
-</form>
+        </div>
+        </form>
+    </div>
+<div class="btn-box">
+    <form action="instructorHome.html" method="post">
+        <input class="btn" type="submit" value="Create Course">
+    </form>
+</div>
 </body>
 </html>
