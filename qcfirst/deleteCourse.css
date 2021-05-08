@@ -1,0 +1,122 @@
+.title{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: large;
+    text-transform: uppercase;
+}
+
+#body table tr, td{
+    padding: 20px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+
+}
+.header-row{
+    text-transform: uppercase;
+    background-color: white;
+}
+.header-row th{
+    color: darkred;
+}
+table {
+    display: flex;
+    justify-content: center;
+}
+
+td{
+    font-size: small;
+}
+
+th{
+    padding: 10px;
+}
+
+#body table{
+    border: 1px solid black;
+}
+
+.checkbox-cntr{
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkbox-cntr input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.newBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+.checkbox-cntr:hover input ~ .newBox {
+    background-color: white;
+    transform: scale(1.25);
+}
+
+.checkbox-cntr input:checked ~ .newBox {
+    background-color: lightcoral;
+}
+
+.newBox:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-cntr input:checked ~ .newBox:after {
+    display: block;
+}
+
+.checkbox-cntr .newBox:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.remove-btn{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.remove-btn input{
+    background-color: darkred;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: medium;
+    border-radius: 4px;
+    color: white;
+}
+
+input:hover{
+    text-decoration: line-through;
+    color: darkred;
+    box-shadow: inset 400px 0 0 0 white;
+
+}
+

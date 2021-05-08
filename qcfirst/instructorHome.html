@@ -4,55 +4,62 @@
     <Title>Instructor Home</Title>
     <meta name="viewport" content="width = device-width, initial scale=1">
     <link rel="stylesheet" href="myStyle.css">
+    <link rel="stylesheet" href="instructorHome.css">
+    <script src="myScript.js"></script>
 </head>
 <body>
-<div class="header-ctnr">
-    <h1>CUNYFirst<h1>
-</div>
-        <hr>
-<div>
+    <div class="header-ctnr">
+        <h1>CUNYFirst</h1>
+    </div>
+
+    <div id="title">
         <h2>My Schedule</h2>
-</div>
+    </div>
 <div id="body">
-        <hr>
         <table>
+            <div class="title-row">
             <tr>
                 <th>Course</th>
-                <th>Day/Time</th>
+                <th>Days</th>
+                <th>Time</th>
             </tr>
+            </div>
             </thead>
             <tr>
                 <td>CS355</td>
-                <td>M/W 12:00pm-1:15pm</td>
+                <td>M/W</td>
+                <td>12:00pm-1:15pm</td>
             </tr>
             <tr>
                 <td>CS331</td>
-                <td>T/TH 12:00pm-1:15pm</td>
+                <td>T/TH</td>
+                <td>12:00pm-1:15pm</td>
             </tr>
             <tr>
                 <td>CS3205</td>
-                <td>F 12:00pm-3:00pm</td>
+                <td>F</td>
+                <td>12:00pm-3:00pm</td>
             </tr>
             <tr>
                 <td>CS313</td>
-                <td>M/W 1:00pm-2:15pm</td>
+                <td>M/W</td>
+                <td>1:00pm-2:15pm</td>
             </tr>
         </table>
 </div>
 
 
 
-<div class="btns">
-    <button type="button" class="managebtn">Manage Schedule</button>
-    <br>
-    <form action="createCourse.html">
-        <input type="submit" value="Add Course">
-    </form>
-    <form action="deleteCourse.html">
-        <input type="submit" value="Remove Course">
-    </form>
-
-</div>
-</div>
+    <div class="btns">
+        <button onclick="myFunction()" id="managebtn">Manage Schedule</button>
+    </div>
+    <div id="hidden-btns">
+        <form  action="createCourse.html">
+            <input type="submit" value="Add Course">
+        </form>
+        <form  action="deleteCourse.html">
+            <input type="submit" value="delete course">
+        </form>
+    </div>
 </body>
 </html>

@@ -4,56 +4,72 @@
     <title>Title</title>
     <meta name="viewport" content="width = device-width, initial scale=1">
     <link rel="stylesheet" href="myStyle.css">
+    <link rel="stylesheet" href="deleteCourse.css">
 </head>
 <body>
-<div class="container">
     <div class="header-ctnr">
         <h1>CUNYFirst<h1>
     </div>
-        <hr>
-
+    <div class="title">
         <h2>My Schedule</h2>
-        <hr>
-
-        <table id="body">
-            <tr>
+    </div>
+    <div>
+        <table>
+            <tr class="header-row">
                 <th>Course</th>
-                <th>Day/Time</th>
+                <th>Day</th>
+                <th colspan="2">Time</th>
             </tr>
             </thead>
             <tr>
                 <td>CS355</td>
-                <td>M/W 12:00pm-1:15pm</td>
+                <td>M/W</td>
+                <td>12:00pm-1:15pm</td>
                 <td>
-                    <input type="checkbox">
+                    <label class="checkbox-cntr">
+                        <input type="checkbox">
+                        <span class="newBox"></span>
+                    </label>
                 </td>
             </tr>
             <tr>
                 <td>CS331</td>
-                <td>T/TH 12:00pm-1:15pm</td>
+                <td>T/TH</td>
+                <td> 12:00pm-1:15pm</td>
                 <td>
-                    <input type="checkbox">
+                    <label class="checkbox-cntr">
+                        <input type="checkbox">
+                        <span class="newBox"></span>
+                    </label>
                 </td>
             </tr>
             <tr>
                 <td>CS3205</td>
-                <td>F 12:00pm-3:00pm</td>
+                <td>F</td>
+                <td> 12:00pm-3:00pm</td>
                 <td>
-                    <input type="checkbox">
+                    <label class="checkbox-cntr">
+                        <input type="checkbox">
+                        <span class="newBox"></span>
+                    </label>
                 </td>
             </tr>
             <tr>
                 <td>CS313</td>
-                <td>M/W 1:00pm-2:15pm</td>
+                <td>M/W</td>
+                <td> 1:00pm-2:15pm</td>
                 <td>
-                    <input type="checkbox">
+                    <label class="checkbox-cntr">
+                        <input type="checkbox">
+                        <span class="newBox"></span>
+                    </label>
                 </td>
             </tr>
         </table>
-
-        <hr>
+    </div>
+    <div class="remove-btn">
         <form action="confirmDelete.html">
-            <input type="submit" value="Remove Selected">
+            <input class="button" type="submit" value="Remove Selected">
         </form>
     </div>
 </body>
