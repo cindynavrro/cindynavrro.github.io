@@ -5,6 +5,7 @@
     <title>Student Home Page</title>
     <meta name="viewport" content="width = device-width, initial scale=1">
     <link rel="stylesheet" href="myStyle.css">
+    <link rel="stylesheet" href="studentHome.css">
 </head>
 
 <body>
@@ -18,40 +19,47 @@
             <div class="bar3"></div>
         </div>
     <div id="body">
-        <h3>My Schedule</h3>
+        <h3>My Schedule:</h3>
         <table id="homeTable">
             <tr>
                 <th>My Class Schedule</th>
-                <th>Day/Time</th>
+                <th>Day</th>
+                <th>Time</th>
                 <th>Instructor</th>
             </tr>
             <tr>
                 <td>CS355</td>
-                <td>M/W 12:00pm-1:15pm</td>
+                <td>M/W</td>
+                <td>12:00pm-1:15pm</td>
                 <td>Dave Schoul</td>
             </tr>
             <tr>
                 <td>CS331</td>
-                <td>T/TH 12:00pm-1:15pm</td>
+                <td>T/TH</td>
+                <td> 12:00pm-1:15pm</td>
                 <td>Jessy Jones</td>
             </tr>
             <tr>
                 <td>CS3205</td>
-                <td>F 12:00pm-3:00pm</td>
+                <td>F</td>
+                <td> 12:00pm-3:00pm</td>
                 <td>Nancy Carter</td>
             </tr>
             <tr>
                 <td>CS313</td>
-                <td>M/W 1:00pm-2:15pm</td>
+                <td>M/W</td>
+                <td> 1:00pm-2:15pm</td>
                 <td>Jerry Tombsome</td>
             </tr>
         </table>
     </div>
-    <div>
-        <button id="addCourse">Add Course</button>
+    <div class="btn">
+        <form action="enrollmentPage.html" method="get">
+            <input class="btn2" type="submit" value="Course Enrollment">
+        </form>
+    </div>
         <p><a href="enrollmentPage.html">EnrollmentPage</a></p>
         <p><a href="classListDisplay.html">Class List Display</a></p>
-    </div>
 </body>
 
 </html>

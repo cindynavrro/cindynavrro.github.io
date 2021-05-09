@@ -4,8 +4,10 @@
     <title>Enrollment Page</title>
     <meta name="viewport" content="width = device-width, initial scale= 1">
     <link rel="stylesheet" href="myStyle.css">
+    <link rel="stylesheet" href="enrollmentPage.css">
 </head>
 <body>
+
     <div class="header-ctnr">
         <h1>CUNYFirst</h1>
     </div>
@@ -17,7 +19,6 @@
         </div>
     </div>
     <div>
-        <h3>Ready to Enroll?</h3>
     <div class="box-cntr">
         <label for="term">*Term:</label>
         <select name="term" id="term" autofocus>
@@ -44,38 +45,68 @@
         <div class="box-cntr">
             <button id="enrollSearch">Search</button>
         </div>
+        <h3>Ready to Enroll?</h3>
         <table id="body">
+            <div class="title-row">
             <tr>
-                <th>My Class Schedule</th>
+                <th>My Shopping Cart</th>
                 <th>Day/Time</th>
-                <th>Instructor</th>
-                <th><button id="delete">Delete</button></th>
+                <th colspan="2">Instructor</th>
             </tr>
+            </div>
             <tr>
                 <td>CS355</td>
                 <td>M/W 12:00pm-1:15pm</td>
                 <td>Dave Schoul</td>
-                <th><button id="delete">Delete</button></th>
+                <th>
+                    <label class="checkbox-cntr">
+                        <input type="checkbox">
+                        <span class="newBox"></span>
+                    </label>
+                </th>
             </tr>
             <tr>
                 <td>CS331</td>
                 <td>T/TH 12:00pm-1:15pm</td>
                 <td>Jessy Jones</td>
-                <th><button id="delete">Delete</button></th>
+                <th>
+                    <label class="checkbox-cntr">
+                        <input type="checkbox">
+                        <span class="newBox"></span>
+                    </label>
+                </th>
             </tr>
             <tr>
                 <td>CS3205</td>
                 <td>F 12:00pm-3:00pm</td>
                 <td>Nancy Carter</td>
-                <th><button id="delete">Delete</button></th>
+                <th>
+                    <label class="checkbox-cntr">
+                        <input type="checkbox">
+                        <span class="newBox"></span>
+                    </label>
+                </th>
             </tr>
             <tr>
                 <td>CS313</td>
                 <td>M/W 1:00pm-2:15pm</td>
                 <td>Jerry Tombsome</td>
-                <th><button id="delete">Delete</button></th>
+                <th>
+                    <label class="checkbox-cntr">
+                        <input type="checkbox">
+                        <span class="newBox"></span>
+                    </label>
+                </th>
             </tr>
         </table>
+        <div class="btns">
+            <form  action="">
+                <input id="enrollBtn" type="submit" value="Enroll">
+            </form>
+            <form action="">
+                <input id="deleteBtn" type="submit" value="Remove">
+            </form>
+        </div>
     </div>
 </body>
 

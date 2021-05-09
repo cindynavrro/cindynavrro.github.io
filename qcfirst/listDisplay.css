@@ -1,0 +1,38 @@
+.title{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: large;
+    text-transform: uppercase;
+}
+
+#body table tr, td{
+    padding: 20px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+
+}
+.header-row{
+    text-transform: uppercase;
+    background-color: white;
+}
+.header-row th{
+    color: darkred;
+}
+table {
+    display: flex;
+    justify-content: center;
+}
+
+td{
+    font-size: small;
+}
+
+th{
+    padding: 10px;
+}
+
+#body table{
+    border: 1px solid black;
+}

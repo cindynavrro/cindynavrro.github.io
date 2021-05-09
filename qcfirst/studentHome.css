@@ -1,0 +1,45 @@
+th {
+    background-color: white;
+    padding: 8px;
+    text-transform: uppercase;
+}
+
+h2{
+    text-decoration: none;
+}
+
+table {
+    border: 2px solid white;
+    border-radius: 3px;
+}
+
+td{
+    font-size: small;
+    padding: 10px 25px 10px 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+tr:hover{
+    background-color: white;
+    color: darkred;
+    transition: all .2s ease-in-out;
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.btn input{
+    padding: 10px 25px;
+    background-color: white;
+    color: black;
+    border-radius: 3px;
+    text-transform: lowercase;
+}
