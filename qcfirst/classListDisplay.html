@@ -4,6 +4,7 @@
     <title>CLass List</title>
     <meta name="viewport" content="width = device-width, initial scale=1">
     <link rel="stylesheet" href="myStyle.css">
+    <link rel="stylesheet" href="listDisplay.css">
 </head>
 
 <body>
@@ -13,62 +14,21 @@
     <div>
         <h2>Student</h2>
     </div>
-    <div id="header">
-        <table id="body">
-            <tr>
-                <th>Class Search</th>
-            </tr>
-        </table>
-        <button classs="btn" id="newSearch">New Search</button>
-        <button classs="btn" id="ModifySearch">Modify Search</button>
+    <h3>Class Search</h3>
+
+    <div class="searchBtns">
+        <form  action="enrollmentPage.html">
+            <input type="submit" value="New Search">
+        </form>
     </div>
-    <div id="departmentSection">
-        <table id="courseSection">
-            <tr>
-                <th id="courseNum">CS355</th>
-                <th>Day</th>
-                <th>Time</th>
-                <th>Instructor</th>
-                <th>Status</th>
-                <th></th>
-            </tr>
-            <tr>
-                <td>CS355-5454</td>
-                <td>M/W</td>
-                <td>12:00pm-1:15pm</td>
-                <td>Dave Schoul</td>
-                <th>open status</th>
-            </tr>
-            <tr>
-                <td>CS355-3345</td>
-                <td>T/TH</td>
-                <td> 12:00pm-1:15pm</td>
-                <td>Jessy Jones</td>
-                <th>close status</th>
-            </tr>
-            <tr>
-                <td>CS355-5544</td>
-                <td>F</td>
-                <td> 12:00pm-3:00pm</td>
-                <td>Kelly Carter</td>
-                <th>close box</th>
-            </tr>
-            <tr>
-                <td>CS355-7323</td>
-                <td>M/W</td>
-                <td> 1:00pm-2:15pm</td>
-                <td>dave Tombsome</td>
-                <th>open box</th>
-            </tr>
-        </table>
-        <table id="courseSection">
-            <tr>
-                <th id="courseNum"></th>
+    <div id="body">
+        <table>
+            <tr class="header-row">
+                <th>Class</th>
                 <th>Day</td>
                 <th>Time</th>
                 <th>Instructor</th>
-                <th>Status</th>
-                <th></th>
+                <th colspan="3">Status</th>
             </tr>
             <tr>
                 <td>CS331</td>
