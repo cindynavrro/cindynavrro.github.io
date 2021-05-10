@@ -7,6 +7,10 @@ table {
     border-radius: 3px;
 }
 
+tbody{
+    text-align: center;
+}
+
 th {
     background-color: white;
     padding: 8px;
