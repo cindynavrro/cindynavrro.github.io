@@ -4,4 +4,4 @@ Progress is now quanitifiably minimal.
 There is not much too it yet, keyword - yet
 <br>
 May7: Turns out you cannot be meticulous in creative design and complete a front-end in effecient speed at a time crunch. Go figure. 
-May13: Stuggle
+May13: Struggle
