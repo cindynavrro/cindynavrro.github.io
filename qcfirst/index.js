@@ -15,7 +15,9 @@ window.onload = function() {
             courseName: document.querySelector('#course-Name').value,
             courseDescription : document.querySelector('#courseDescription').value,
             courseBeginTime : document.querySelector('#beginTime').value,
-            courseEndTime : document.querySelector('#endTime').value
+            courseEndTime : document.querySelector('#endTime').value,
+            courseDays: getCheckedValues(),
+            courseCapacity : document.querySelector('#courseCap').value
         };
 
         fetch('http://localhost:5000/insert', {
@@ -29,7 +31,10 @@ window.onload = function() {
                 name: aCourse.courseName,
                 description: aCourse.courseDescription,
                 beginTime: aCourse.courseBeginTime,
-                endTime: aCourse.courseEndTime
+                endTime: aCourse.courseEndTime,
+                days: aCourse.courseDays,
+                capacity: aCourse.courseCapacity
+
             })
         })
             .then(response => response.json())
@@ -60,4 +65,16 @@ function loadHTMLTable(data) {
 
     table.innerHTML = tableHTML;
 
+}
+
+function getCheckedValues() {
+    let checkbox = document.querySelectorAll('input[type="checkbox"]:checked');
+    let days = "";
+    for (let i = 0; i < checkbox.length; i++) {
+        if (checkbox[i].checked) {
+            days = days + checkbox[i].value + "/";
+        }
+    }
+    days = days.slice(0, days.length - 1);
+    return days;
 }
