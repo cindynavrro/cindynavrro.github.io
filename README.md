@@ -7,5 +7,6 @@ May7: Turns out you cannot be meticulous in creative design and complete a front
 <br>
 May13: Struggle --- 
 <br>
-later in the evening found less struggle. Succesfull connection to the database ^-^ 
+later in the evening found less struggle. Succesfull connection to the database ^-^
+<br>
 Mat21: works one second, breaks on the next refresh... 
