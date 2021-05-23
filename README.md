@@ -8,4 +8,3 @@ May7: Turns out you cannot be meticulous in creative design and complete a front
 May13: Struggle --- 
 <br>
 later in the evening found less struggle. Succesfull connection to the database ^-^ 
-May21: Cri
