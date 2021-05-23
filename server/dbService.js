@@ -41,13 +41,13 @@ class DbService{
         }
     }
 
-    async insertNewCourse(term, department, name, description, beginTime, endTime){
+    async insertNewCourse(term, department, name, description, beginTime, endTime, days, capacity){
         try{
             const insertID = await new Promise((resolve, reject) => {
                 const query = "INSERT INTO course" +
-                    " (term, department, courseName, courseDescription, beginTime, endTime)" +
-                    " VALUES (?,?,?,?,?,?);";
-                connection.query(query, [term, department,name, description, beginTime, endTime],
+                    " (term, department, courseName, courseDescription, beginTime, endTime, days, courseCapacity)" +
+                    " VALUES (?,?,?,?,?,?,?,?);";
+                connection.query(query, [term, department,name, description, beginTime, endTime, days, capacity],
                     (err, result) => {
                         if (err) reject(new Error(err.message));
                         resolve(result);
