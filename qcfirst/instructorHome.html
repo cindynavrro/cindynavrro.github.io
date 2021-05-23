@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <Title>Instructor Home</Title>
-    <meta name="viewport" content="width = device-width, initial scale=1">
+    <meta name="viewport" content="width = device-width, initial-scale=1">
     <link rel="stylesheet" href="myStyle.css">
     <link rel="stylesheet" href="instructorHome.css">
-    <script src="index.js"></script>
 </head>
 <body>
     <div class="header-ctnr">
@@ -25,24 +24,28 @@
                 <th>Time</th>
             </div>
             </thead>
-            <tbody>
+            <tbody id="table-body">
 
             </tbody>
         </table>
 </div>
-
-
-
     <div class="btns">
         <button onclick="myFunction()" id="managebtn">Manage Schedule</button>
     </div>
     <div id="hidden-btns">
-        <form  action="createCourse.html">
-            <input type="submit" value="Add Course">
-        </form>
-        <form  action="deleteCourse.html">
-            <input type="submit" value="delete course">
-        </form>
+        <button class="btn" id="createCourse-btn">Create Course</button>
+        <button class="btn" id="deleteCourse-btn">Delete Course</button>
     </div>
+
+    <script type="text/javascript">
+        document.getElementById("createCourse-btn").onclick= function () {
+            location.href = "createCourse.html"
+        };
+        document.getElementById("deleteCourse-btn").onclick= function () {
+            location.href = "deleteCourse.html"
+        };
+    </script>
 </body>
 </html>
+
+<script src="index.js"></script>

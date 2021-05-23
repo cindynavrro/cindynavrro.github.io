@@ -62,14 +62,14 @@ tr:hover{
     justify-content: center;
 }
 
-#hidden-btns input {
+.btn {
     background-color: lightgray;
     padding: 10px;
     margin: 15px;
     text-transform: lowercase;
 }
 
-input:hover{
+.btn:hover{
     transform: rotate(5deg);
 }
 

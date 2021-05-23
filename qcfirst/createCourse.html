@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>Title</title>
-    <meta name="viewport" content="width = device-width, initial scale= 1">
+    <meta name="viewport" content="width = device-width, initial-scale= 1">
     <link rel="stylesheet" href="myStyle.css">
     <link rel="stylesheet" href="createCourse.css">
 </head>
@@ -15,14 +15,14 @@
     <h4>Enter course information to create:</h4>
     </div>
     <div class="form-cntr">
-        <form method="get">
+        <form method="post">
             <div class="first-box">
                 <div class="items">
                     <div class="item-label">
                         <label for="term">Select Term:</label>
                         <select class="item-input" name="term" id="term">
-                            <option value="2021summer">2021 Summer</option>
-                            <option value="2021fall">2021 Fall</option>
+                            <option value="2021 Summer">2021 Summer</option>
+                            <option value="2021 Fall">2021 Fall</option>
                     </select>
                     </div>
                 <br>
@@ -31,14 +31,14 @@
                         <select class="item-input"name="department" id="department">
                             <option value="art">Art</option>
                             <option value="compSci">Computer Science</option>
-                            <option value="math">Mathematicsf</option>
+                            <option value="math">Mathematics</option>
                             <option value="science">Science</option>
                         </select>
                     </div>
                 <br>
                     <div class="item-label">
-                      <label class="item-label" for="courseName">Enter Course Name:</label>
-                      <input class="item-input" type="text" placeholder="Course Name" name="courseName" id="courseName"required>
+                      <label class="item-label" for="course-Name">Enter Course Name:</label>
+                      <input class="item-input" type="text" placeholder="Course Name" name="courseName" id="course-Name"required>
                     </div>
                 <br>
                 <label class="item-label" for="courseDescription">Enter Course Description:</label>
@@ -48,45 +48,33 @@
             </div>
     <h5>Schedule Selector</h5>
             <div class="box-cntr2">
-    <label class="checkbox-cntr" for="beginTime">Begin Time:</label>
-    <input class="checkbox-cntr" type="date-time" id="beginTime" name="beginTime" placeholder="11:30">
-
-            <input class="checkbox-cntr" type="checkbox" checked="checked" name="am"> AM
-            <label class="checkbox-cntr">
-                <input class="checkbox-cntr" class="checkbox-cntr" type="checkbox" name="pm"> PM
-            </label>
+                <label class="checkbox-cntr" for="beginTime">Begin Time:</label>
+                <input class="checkbox-cntr" type="time" id="beginTime" name="beginTime" placeholder="11:30">
             </div>
 
             <div class="box-cntr2">
-            <label for="endTime">End Time:</label>
-            <input type="date-time" id="endTime" name="endTime" placeholder="1:15">
-
-            <label class="checkbox-cntr">
-                <input type="checkbox" name="am"> AM
-            </label>
-            <label class="checkbox-cntr">
-                <input type="checkbox"  checked="checked" name="pm"> PM
-            </label>
+                <label for="endTime">End Time:</label>
+                <input type="time" id="endTime" name="endTime" placeholder="1:15">
             </div>
 
             <fieldset id="days">
                 <legend>Days</legend>
-                <input type="radio" name="days" value="Monday" id="mon">
+                <input type="checkbox" class="days" value="Mon" id="mon">
                 <label for="mon">Mon</label>
 
-                <input type="radio" name="days" value="Tuesday" id="tues">
+                <input type="checkbox" class="days" value="Tues" id="tues">
                 <label for="tues">Tues</label>
 
-                <input type="radio" name="days" value="Wednesday" id="wed">
+                <input type="checkbox"  class="days" value="Wedn" id="wed">
                 <label for="wed">Wedn</label>
 
-                <input type="radio" name="days" value="Thursday" id="thurs">
+                <input type="checkbox"  class="days" value="Thurs" id="thurs">
                 <label for="thurs">Thurs</label>
 
-                <input type="radio" name="days" value="Friday" id="fri">
+                <input type="checkbox"  class="days" value="Fri" id="fri">
                 <label for="fri">Fri</label>
 
-                <input type="radio" name="days" value="Saturday" id="sat">
+                <input type="checkbox" class="days" value="Sat" id="sat">
                 <label for="sat">Sat</label>
             </fieldset>
 
@@ -96,12 +84,17 @@
             <input type="number" name="capacity" placeholder="30" id="courseCap" step="5" required>
             <br>
         </div>
+
+
         </form>
     </div>
-<div class="btn-box">
-    <form action="instructorHome.html" method="post">
-        <input class="btn" type="submit" value="Create Course">
+    <div class="btn-box">
+    <form action="instructorHome.html" method="post" id="add-course-btn">
+        <input class="btn"type="submit" value="Create Course">
     </form>
-</div>
+    </div>
 </body>
 </html>
+
+<script src="index.js"></script>
+
