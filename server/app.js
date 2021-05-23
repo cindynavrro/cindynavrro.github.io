@@ -15,13 +15,14 @@ app.post('/insert', (request, response) => {
     const { term, department, name, description, beginTime, endTime, days, capacity}
         = request.body;
 
-    console.log(request.body);
+    //console.log(request.body);
     const db = dbService.getDbServiceInstance();
     const result = db.insertNewCourse(term,department, name, description, beginTime, endTime, days, capacity);
 
     result
-        .then(data => response.json({success : true}))
+        .then(data => response.json({data: data}))
         .catch(err => console.log(err));
+
 });
 
 let i = 1;
@@ -31,7 +32,7 @@ app.get('/getAll', (request, response) => {
 
     const db = dbService.getDbServiceInstance();
     const result = db.getAllData();
-
+    //
     // result.then(function (result){
     //     console.log(result);
     // })
@@ -43,8 +44,17 @@ app.get('/getAll', (request, response) => {
     result
         .then(data => response.json({data: data}))
         .catch(err => console.log(err));
-
-
 })
+
+//delete
+app.delete('/delete/:id', (request, response) => {
+    const { id } = request.params;
+
+    const  db = dbService.getDbServiceInstance();
+    const result = db.deleteRowByID(id);
+    // result
+    //     .then(data => response.json({success: true}))
+    //     .catch(err => console.log(err));
+});
 
 app.listen(process.env.PORT, () => console.log('Running'));
