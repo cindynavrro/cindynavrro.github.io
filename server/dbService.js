@@ -1,5 +1,6 @@
 const mysql = require('mysql');
 const dotenv = require('dotenv');
+let instance = null;
 dotenv.config();
 
 const connection = mysql.createConnection({
@@ -16,3 +17,45 @@ connection.connect((err) => {
     }
     console.log('db' + connection.state)
 })
+
+//functions to interact with data
+class DbService{
+    static getDbServiceInstance() {
+        //if instance is not null; creates new instance of the service
+        return instance ? instance : new DbService();
+    }
+
+    async getAllData() {
+        try {
+            const response = await new Promise((resolve, reject) => {
+                const query = "SELECT * FROM course";
+                connection.query(query, (err, result) => {
+                    if (err) reject(new Error(err.message));
+                    resolve(result);
+                })
+            });
+            //console.log(response)
+            return response;
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    async insertNewCourse(term, courseName){
+        try{
+            const insertID = await new Promise((resolve, reject) => {
+                const query = "INSERT INTO course (term, courseName) VALUES (?, ?);";
+                connection.query(query, [term, courseName] ,(err, result) => {
+                    if (err) reject(new Error(err.message));
+                    resolve(result.insertId);
+                })
+            });
+            console.log(insertID);
+            return insertID;
+        } catch (error) {
+            console.log(error);
+        }
+    }
+}
+
+module.exports = DbService;
