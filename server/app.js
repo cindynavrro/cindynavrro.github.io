@@ -12,11 +12,11 @@ app.use(express.urlencoded({extended : false }));
 
 //create
 app.post('/insert', (request, response) => {
-    const { term, courseName } = request.body;
+    const { term, department, name, description} = request.body;
 
     console.log(request.body);
     const db = dbService.getDbServiceInstance();
-    const result = db.insertNewCourse(term, courseName);
+    const result = db.insertNewCourse(term,department, name, description);
 
     result
         .then(data => response.json({success : true}))

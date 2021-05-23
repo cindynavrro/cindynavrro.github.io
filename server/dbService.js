@@ -41,11 +41,14 @@ class DbService{
         }
     }
 
-    async insertNewCourse(term, courseName){
+    async insertNewCourse(term, department, name, description){
         try{
             const insertID = await new Promise((resolve, reject) => {
-                const query = "INSERT INTO course (term, courseName) VALUES (?, ?);";
-                connection.query(query, [term, courseName] ,(err, result) => {
+                const query = "INSERT INTO course" +
+                    " (term, department, courseName, courseDescription)" +
+                    " VALUES (?,?,?, ?);";
+                connection.query(query, [term, department,name, description],
+                    (err, result) => {
                     if (err) reject(new Error(err.message));
                     resolve(result.insertId);
                 })
