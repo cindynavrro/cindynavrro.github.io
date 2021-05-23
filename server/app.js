@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended : false }));
 //create
 app.post('/insert', (request, response) => {
     const { term, department, name, description, beginTime, endTime}
-    = request.body;
+        = request.body;
 
     console.log(request.body);
     const db = dbService.getDbServiceInstance();

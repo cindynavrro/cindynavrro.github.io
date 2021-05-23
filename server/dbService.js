@@ -49,9 +49,9 @@ class DbService{
                     " VALUES (?,?,?,?,?,?);";
                 connection.query(query, [term, department,name, description, beginTime, endTime],
                     (err, result) => {
-                    if (err) reject(new Error(err.message));
-                    resolve(result.insertId);
-                })
+                        if (err) reject(new Error(err.message));
+                        resolve(result);
+                    })
             });
             console.log(insertID);
             return insertID;
