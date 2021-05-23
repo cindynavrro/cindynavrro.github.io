@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
     <title>Title</title>
-    <meta name="viewport" content="width = device-width, initial scale=1">
+    <meta name="viewport" content="width = device-width, initial-scale=1">
     <link rel="stylesheet" href="myStyle.css">
     <link rel="stylesheet" href="deleteCourse.css">
 </head>
 <body>
     <div class="header-ctnr">
-        <h1>CUNYFirst<h1>
+        <h1>CUNYFirst</h1>
     </div>
         <h2>Instructor</h2>
     <div class="title">
         <h2>My Schedule</h2>
     </div>
-    <div>
+<div id="cntr" style="display: flex; justify-content: center">
         <table>
             <tr class="header-row">
                 <th>Course</th>
@@ -22,56 +22,12 @@
                 <th colspan="2">Time</th>
             </tr>
             </thead>
-            <tr>
-                <td>CS355</td>
-                <td>M/W</td>
-                <td>12:00pm-1:15pm</td>
-                <td>
-                    <label class="checkbox-cntr">
-                        <input type="checkbox">
-                        <span class="newBox"></span>
-                    </label>
-                </td>
-            </tr>
-            <tr>
-                <td>CS331</td>
-                <td>T/TH</td>
-                <td> 12:00pm-1:15pm</td>
-                <td>
-                    <label class="checkbox-cntr">
-                        <input type="checkbox">
-                        <span class="newBox"></span>
-                    </label>
-                </td>
-            </tr>
-            <tr>
-                <td>CS3205</td>
-                <td>F</td>
-                <td> 12:00pm-3:00pm</td>
-                <td>
-                    <label class="checkbox-cntr">
-                        <input type="checkbox">
-                        <span class="newBox"></span>
-                    </label>
-                </td>
-            </tr>
-            <tr>
-                <td>CS313</td>
-                <td>M/W</td>
-                <td> 1:00pm-2:15pm</td>
-                <td>
-                    <label class="checkbox-cntr">
-                        <input type="checkbox">
-                        <span class="newBox"></span>
-                    </label>
-                </td>
-            </tr>
+            <tbody id="table-body">
+
+            </tbody>
         </table>
-    </div>
-    <div class="remove-btn">
-        <form action="confirmDelete.html">
-            <input class="button" type="submit" value="Remove Selected">
-        </form>
-    </div>
+</div>
 </body>
 </html>
+
+<script src="index.js"></script>
