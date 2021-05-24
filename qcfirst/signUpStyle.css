@@ -67,7 +67,14 @@ h2{
     border-radius: 3px;
     background-color: antiquewhite;
 }
-.cnl:hover{
+
+button{
+    padding: 10px 15px;
+    margin: 7px;
+    border-radius: 3px;
+    background-color: antiquewhite;
+}
+.submit-btn:hover{
     color: white;
     box-shadow: inset 400px 0 0 0 lightgreen;
     -webkit-transition: ease-out 0.5s;
@@ -75,7 +82,7 @@ h2{
     transition: ease-out 0.5s;
 }
 
-.signup:hover{
+.cancel-btn:hover{
     color: white;
     box-shadow: inset 400px 0 0 0 lightsalmon;
     -webkit-transition: ease-out 0.5s;

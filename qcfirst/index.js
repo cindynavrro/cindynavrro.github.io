@@ -43,7 +43,6 @@ window.onload = function() {
 };
 
 
-
 function insertRowIntoTable(data){
 
 }
@@ -97,5 +96,4 @@ function getCheckedValues() {
     days = days.slice(0, days.length - 1);
     return days;
 }
-
 

@@ -1,3 +1,6 @@
+<?php
+include("server.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +12,7 @@
 <div class="header-ctnr">
     <h1>CUNYFirst<h1>
 </div>
-<form class="main-form" action="logIn.html" method="post" id="registerForm">
+<form class="main-form" action="signUp.inc.php" method="post" id="registerForm">
     <div class="container">
         <div class="signUp-container">
             <h2>SIGN UP</h2>
@@ -24,36 +27,35 @@
 
 
         <label class="label" for="email"><b>Email</b></label>
-        <input class="input-field" id="email" type="text" placeholder="Enter Email" name="email" required>
+        <input class="input-field" id="email" type="email" placeholder="Enter Email" name="email" required>
 
 
         <label class="label" for="password"><b>Password</b></label>
         <input class="input-field" id="password" type="password" placeholder="Enter Password" name="password" required>
 
         <label class="label"  for="confirmPassword"><b>Repeat Password</b></label>
-        <input class="input-field" id="confirmPassword" type="password" placeholder="Repeat Password" name="confirmPassword" required>
+        <input class="input-field" type="password" placeholder="Confirm Password" name="confirmPassword" required>
 
         <br>
-<div class="rmb-me">
-        <label>
-            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-        </label>
-</div>
+        <div class="rmb-me">
+            <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+            </label>
+        </div>
         <br>
         <div class="stud-prof">
-        <label for="userType">I am:</label>
-            <select name="choice" id="userType">
+            <label for="choice">I am:</label>
+            <select name="userType" id="choice">
                 <option value="Student">Student</option>
                 <option value="Professor">Professor</option>
             </select>
         </div>
 
         <div class="btns">
-            <input class="submit-btn" type="submit" value="Sign Up" id="submit">
+            <input class="submit-btn" type="submit" value="Sign Up" id="submit" name="submit">
             <button onclick="location.href='logIn.html'" class="cancel-btn">Cancel</button>
         </div>
     </div>
 </form>
 </body>
 </html>
-<script src="index.js"></script>
