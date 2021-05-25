@@ -9,6 +9,7 @@ include("server.php");
     <link rel="stylesheet" href="signUpStyle.css">
 </head>
 <body>
+<div>
 <div class="header-ctnr">
     <h1>CUNYFirst<h1>
 </div>
@@ -16,6 +17,17 @@ include("server.php");
     <div class="container">
         <div class="signUp-container">
             <h2>SIGN UP</h2>
+            <?php
+             if(isset($_GET["error"])){
+                 if($_GET['error'] == "none"){
+                     echo "<p id='insert'>Success!</p>";
+                 }else if($_GET['error'] == "reconfirm"){
+                     echo "<p id='insert'>Passwords dont match</p>";
+                 }else if($_GET['error'] == "invalidEmail"){
+                     echo "<p id='insert'>Email Taken</p>";
+                 }
+             }
+            ?>
         </div>
         <p>Please provide the following information. </p>
 
@@ -48,14 +60,18 @@ include("server.php");
             <select name="userType" id="choice">
                 <option value="Student">Student</option>
                 <option value="Professor">Professor</option>
+                <option value="Admin">Admin</option>
             </select>
         </div>
 
         <div class="btns">
-            <input class="submit-btn" type="submit" value="Sign Up" id="submit" name="submit">
-            <button onclick="location.href='logIn.html'" class="cancel-btn">Cancel</button>
+            <input  class="submit-btn" type="submit" value="Sign Up" id="submit" name="submit">
+            <button onclick="location.href='logIn.php'" class="cancel-btn">Return Home</button>
         </div>
     </div>
 </form>
 </body>
 </html>
+<?php
+include_once ("footer.php")
+?>

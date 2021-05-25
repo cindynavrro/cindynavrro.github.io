@@ -20,10 +20,6 @@
 .header-row th{
     color: darkred;
 }
-table {
-    display: flex;
-    justify-content: center;
-}
 
 td{
     font-size: small;
@@ -38,6 +34,9 @@ th{
     justify-content: center;
 }
 
+.btn{
+    border-radius: 10px;
+}
 .searchBtns input{
     background-color: lightgray;
     padding: 10px;

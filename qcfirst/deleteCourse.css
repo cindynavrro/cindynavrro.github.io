@@ -7,13 +7,17 @@
     text-transform: uppercase;
 
 }
+body{
+    background: url("qc-campus.jpg") center;
+    background-size: cover;
+}
 
 #body table tr, td{
     padding: 20px;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
-
 }
+
 .header-row{
     text-transform: uppercase;
     background-color: white;

@@ -33,18 +33,18 @@ if(isset($_POST['submit'])) {
                 $stmt = $conn->prepare($INSERT);
                 $stmt->bind_param("sssss", $email, $fName, $lName, $psw, $userType);
                 if ($stmt->execute()) {
-                    echo '<script>alert("Registration successful!")</script>';
+                    header("location: signUp.php?error=none");
                 } else {
                     echo $stmt->error;
                 }
             } else{
-                echo '<script>alert("Err: Passwords do not match.")</script>';
-
+                header("location: signUp.php?error=reconfirm");
+                //echo '<script>alert("Err: Passwords do not match.")</script>';
             }
         }
         else {
-            echo '<script>alert("Err: Email is already registered.")</script>';
-
+            header("location: signUp.php?error=invalidEmail");
+            //echo '<script>alert("Err: Email is already registered.")</script>';
         }
         $stmt->close();
         $conn->close();

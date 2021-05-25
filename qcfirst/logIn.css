@@ -6,7 +6,6 @@ body{
 }
 
 .logo-container {
-    background-color: white;
     display: flex;
     justify-content: center;
 }
@@ -16,13 +15,14 @@ header{
     justify-content: center;
     font-size: xx-large;
     color: white;
-    background-image: linear-gradient(white,lightcoral, #dc3e49, lightcoral,white);
+    background-image: linear-gradient(darkred,lightcoral, #dc3e49, lightcoral, darkred);
     border-radius: 5px;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .box-container{
     background: antiquewhite;
+    opacity: 90%;
     box-shadow: 2px 0px 20px #dc3e49;
     height: auto;
     padding: 50px;
@@ -83,6 +83,7 @@ header{
 .forgotpsw-container{
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 .logIn-container input{

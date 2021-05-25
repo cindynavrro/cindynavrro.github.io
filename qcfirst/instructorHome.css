@@ -2,6 +2,10 @@
     padding: 15px;
 }
 
+body{
+    background: url("qc-campus.jpg") center;
+    background-size: cover;
+}
 table {
     border: 2px solid white;
     border-radius: 3px;

@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+global $dbHost;
+
 $dbHost = "localhost";
 $dbUser = "root";
 $dbPassword = "tinywarrio7";

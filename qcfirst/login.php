@@ -1,3 +1,7 @@
+<?php
+include("server.php");
+session_destroy();
+?>
 
 <!DOCTYPE html>
 <html>
@@ -8,7 +12,7 @@
 </head>
 <body>
     <div class="logo-container">
-        <img src ="qc-logo.png" alt="QC Logo">
+        <img style="border-radius: 1000px; margin-bottom: 25px"src ="qc-logo.png" alt="QC Logo">
     </div>
     <header>
         <h1>QCFirst</h1>
@@ -17,6 +21,15 @@
     <div class="logIn-container">
         <h2>WELCOME!</h2>
         <form action="login.inc.php" method="POST">
+            <?php
+                if(isset($_GET["error"])) {
+                    if ($_GET['error'] == "incorrectPsw") {
+                        echo "<script>alert('Err: Passwords do not match.')</script>";
+                    }if($_GET['error'] == "emailDNE"){
+                        echo "<script>alert('Err: Email does not exist.')</script>";
+                    }
+                }
+            ?>
         <div class="psw-field">
             <label for="uname"><b>Username</b></label>
             <input type="text" placeholder="Enter Email" name="email" required>
@@ -33,11 +46,14 @@
     </div>
     <div class="box">
         <div class="signUp-container">
-            <p>New User? <a href="signUp.html">Sign Up</a></p>
+            <p>New User? <a href="signUp.php">Sign Up</a></p>
         </div>
         <div class="forgotpsw-container">
-            <a href="forgotPsw.html">Forgot Password</a>
+            <a href="forgotPsw.php">Forgot Password</a>
         </div>
     </div>
 </body>
 </html>
+<?php
+include_once ("footer.php");
+?>

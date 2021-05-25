@@ -71,11 +71,11 @@ function loadHTMLTable(data) {
     }
     let tableHTML = "";
 
-    data.forEach(function ({courseID, courseName, days, beginTime, endTime}) {
+    data.forEach(function ({courseID, courseName, days, beginTime, endTime,}) {
         tableHTML += "<tr>";
         tableHTML += `<td>${courseName}</td>`;
         tableHTML += `<td>${days}</td>`;
-        tableHTML += `<td>${beginTime}-${endTime}</td>`
+        tableHTML += `<td>${beginTime}-${endTime}</td>`;
         if(document.getElementById("cntr")){
             tableHTML += `<td><button onclick="location.href='instructorHome.html';" class="delete-row-btn" data-id="${courseID}">Delete</button></td>`
         }

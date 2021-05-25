@@ -3,7 +3,13 @@
     font-family: Menlo;
     margin: 0;
 }
-
+.container p{
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px dashed darkred;
+    border-radius: 3px;
+    background: lightcoral;
+}
 .header-ctnr{
     background-image:linear-gradient(to right,white, lightcoral,#dc3e49,lightcoral, white);
     display: flex;
@@ -14,7 +20,24 @@
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     border-bottom: 3px solid darkred;
 }
-
+.container{
+    display: flex;
+    justify-content: center;
+}
 body{
     background-color: antiquewhite ;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    background-color: #dc3e49;
+    border-radius: none;
+    color: white;
+    margin-top: 10px;
+    font-family: Menlo;
+    font-size: 15px;
+}
+
+form{
+    margin: 20px 20px 20%;
 }
