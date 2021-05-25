@@ -9,4 +9,6 @@ May13: Struggle ---
 <br>
 later in the evening found less struggle. Succesfull connection to the database ^-^
 <br>
-Mat21: works one second, breaks on the next refresh... 
+May21: works one second, breaks on the next refresh... 
+<br>
+May24: no comment
