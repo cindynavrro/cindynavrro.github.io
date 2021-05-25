@@ -13,7 +13,7 @@ include("server.php");
 <div class="header-ctnr">
     <h1>CUNYFirst<h1>
 </div>
-<form class="main-form" action="signUp.inc.php" method="post" id="registerForm">
+<form class="main-form" action="signUp.inc.php"  method="post" id="registerForm">
     <div class="container">
         <div class="signUp-container">
             <h2>SIGN UP</h2>

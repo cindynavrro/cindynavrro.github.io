@@ -25,7 +25,7 @@ echo $user;
     <h4>Enter course information to create:</h4>
 </div>
 <div class="form-cntr">
-    <form method="post">
+    <form action="instructorHome.php"method="post">
         <div class="first-box">
             <div class="items">
                 <div class="item-label">
