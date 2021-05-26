@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', function () {
     fetch('http://localhost:5000/getAll')
         .then(response => response.json())
         .then(data => loadHTMLTable(data['data']));
-    fetch('http://localhost:5000/getShoppingCart')
-        .then(response => response.json())
-        .then(data => loadShoppingCart(data['data']));
+    // fetch('http://localhost:5000/getShoppingCart')
+    //     .then(response => response.json())
+    //     .then(data => loadShoppingCart(data['data']));
     fetch('http://localhost:5000/getStudentSchedule')
         .then(response => response.json())
         .then(data => loadSchedule(data['data']));
@@ -65,13 +65,6 @@ document.querySelector("#table-body").addEventListener('click', function (event)
             event.target.dataset.begin,
             event.target.dataset.end);
     }
-    if(event.target.className === "enroll-btn") {
-        addToStudentSchedule(
-            event.target.dataset.name,
-            event.target.dataset.days,
-            event.target.dataset.begin,
-            event.target.dataset.end);
-    }
 })
 
     function deleteRowById(id) {
@@ -83,21 +76,18 @@ document.querySelector("#table-body").addEventListener('click', function (event)
     }
 
 
-// document.querySelector("#shoppingTable-body").addEventListener('click', function (event){
-//     console.log(event.target.dataset.id);
-//     // if(event.target.className === "add-cart-btn") {
-//     //     addToShoppingCart(event.target.dataset.id,
-//     //                       event.target.dataset.name,
-//     //                       event.target.dataset.days,
-//     //                       event.target.dataset.begin,
-//     //                       event.target.dataset.end);
-//     // }
-// })
+document.querySelector("#shoppingTable-body").addEventListener('click', function (event){
+    console.log(event.target.dataset.id);
+    // if(event.target.className === "add-cart-btn") {
+    //     addToShoppingCart(event.target.dataset.id,
+    //                       event.target.dataset.name,
+    //                       event.target.dataset.days,
+    //                       event.target.dataset.begin,
+    //                       event.target.dataset.end);
+    // }
+})
     function addToShoppingCart(id, name, days, beginT, endT) {
         fetch('http://localhost:5000/shoppingCart', {
-            headers: {
-                'Content-type': 'application/json'
-            },
             method: 'POST',
             body: JSON.stringify({
                 cID: id,
@@ -108,28 +98,9 @@ document.querySelector("#table-body").addEventListener('click', function (event)
             })
         })
             .then(response => response.json())
-            .then(data => insertRowIntoTable(data['data']));
+            .then(data => loadShoppingCart(data['data']));
     }
 
-document.querySelector(".enroll-btn").addEventListener('click', function (event){
-    console.log(event.target);
-})
-    function addToStudentSchedule(name, days, beginT, endT){
-        fetch('http://localhost:5000/studentSchedule', {
-            headers: {
-                'Content-type': 'application/json'
-            },
-            method: 'POST',
-            body: JSON.stringify({
-                cName: name,
-                cDays: days,
-                beginT: beginT,
-                endT: endT
-            })
-        })
-            .then(response => response.json())
-            .then(data => insertRowIntoTable(data['data']));
-    }
 
 function loadHTMLTable(data) {
     const table = document.querySelector('#table-body');
@@ -150,33 +121,12 @@ function loadHTMLTable(data) {
         if(document.getElementById("classListDisplay-table")){
             tableHTML += '<td>TBA</td>';
             tableHTML += '<td class="status">Open</td>';
-            tableHTML += `<td><button  onclick="location.href='enrollmentPage.php'" class="add-cart-btn" data-id="${courseID}",
+            tableHTML += `<td><button  onclick="location.href='enrollmentPage.php';" class="add-cart-btn" data-id="${courseID}",
                                                              data-name="${courseName}",
                                                              data-days="${days}",
                                                              data-begin="${beginTime}", data-end="${endTime}">Add</button></td>`
         }
 
-        tableHTML += "</tr>";
-    });
-    table.innerHTML = tableHTML;
-}
-
-function loadShoppingCart(data){
-    const table = document.querySelector('#shop-table-body');
-    if(data.length === 0) {
-        table.innerHTML = "<tr><td class='no-data' colspan='3'>No Data</td></tr>";
-        return;
-    }
-
-    let tableHTML = "";
-    data.forEach(function ({courseID, courseName, days, beginTime, endTime}) {
-        tableHTML += `<td>${courseName}</td>`;
-        tableHTML += `<td>${days}</td>`;
-        tableHTML += `<td>${beginTime}-${endTime}</td>`;
-        tableHTML += `<td><button onclick="location.href='studentHome.php' "class="enroll-btn" data-shopname="${courseName}",
-                                                                data-sdays="${days}",
-                                                                data-sbegin="${beginTime}", data-send="${endTime}">Enroll</button></td>`;
-        tableHTML += `<td><button class="delete-btn" data-id="${courseID}">Delete</button></td>`;
         tableHTML += "</tr>";
     });
     table.innerHTML = tableHTML;

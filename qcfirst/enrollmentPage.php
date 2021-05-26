@@ -81,9 +81,8 @@ session_start();
     </div>
 </div>
 </body>
-<script src="index.js"></script>
-
 </html>
+<script src="shoppingIndex.js"></script>
 <?php
 include("footer.php");
 ?>

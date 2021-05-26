@@ -1032,81 +1032,150 @@
       <Charset>utf8mb4</Charset>
     </collation>
     <table id="330" parent="6" name="course"/>
-    <table id="331" parent="6" name="userInfo"/>
-    <column id="332" parent="330" name="courseID">
+    <table id="331" parent="6" name="shoppingCart"/>
+    <table id="332" parent="6" name="studentSchedule"/>
+    <table id="333" parent="6" name="userInfo"/>
+    <column id="334" parent="330" name="courseID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="333" parent="330" name="term">
+    <column id="335" parent="330" name="term">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
     </column>
-    <column id="334" parent="330" name="department">
+    <column id="336" parent="330" name="department">
       <Position>3</Position>
       <DataType>varchar(20)|0s</DataType>
     </column>
-    <column id="335" parent="330" name="courseName">
+    <column id="337" parent="330" name="courseName">
       <Position>4</Position>
       <DataType>varchar(20)|0s</DataType>
     </column>
-    <column id="336" parent="330" name="courseDescription">
+    <column id="338" parent="330" name="courseDescription">
       <Position>5</Position>
       <DataType>varchar(100)|0s</DataType>
     </column>
-    <column id="337" parent="330" name="beginTime">
+    <column id="339" parent="330" name="beginTime">
       <Position>6</Position>
       <DataType>varchar(15)|0s</DataType>
     </column>
-    <column id="338" parent="330" name="endTime">
+    <column id="340" parent="330" name="endTime">
       <Position>7</Position>
       <DataType>varchar(15)|0s</DataType>
     </column>
-    <column id="339" parent="330" name="days">
+    <column id="341" parent="330" name="days">
       <Position>8</Position>
       <DataType>varchar(15)|0s</DataType>
     </column>
-    <column id="340" parent="330" name="courseCapacity">
+    <column id="342" parent="330" name="courseCapacity">
       <Position>9</Position>
       <DataType>int(11)|0s</DataType>
     </column>
-    <column id="341" parent="330" name="userType">
+    <column id="343" parent="330" name="instructor">
       <Position>10</Position>
-      <DataType>varchar(15)|0s</DataType>
+      <DataType>varchar(20)|0s</DataType>
     </column>
-    <key id="342" parent="330" name="PRIMARY">
+    <key id="344" parent="330" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>courseID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="343" parent="331" name="userID">
+    <column id="345" parent="331" name="courseID">
+      <Position>1</Position>
+      <DataType>int(10)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="346" parent="331" name="courseName">
+      <Position>2</Position>
+      <DataType>varchar(25)|0s</DataType>
+    </column>
+    <column id="347" parent="331" name="days">
+      <Position>3</Position>
+      <DataType>varchar(15)|0s</DataType>
+    </column>
+    <column id="348" parent="331" name="beginTime">
+      <Position>4</Position>
+      <DataType>varchar(15)|0s</DataType>
+    </column>
+    <column id="349" parent="331" name="endTime">
+      <Position>5</Position>
+      <DataType>varchar(15)|0s</DataType>
+    </column>
+    <column id="350" parent="331" name="instructor">
+      <Position>6</Position>
+      <DataType>varchar(15)|0s</DataType>
+    </column>
+    <key id="351" parent="331" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>courseID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="352" parent="332" name="insertID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="344" parent="331" name="email">
+    <column id="353" parent="332" name="courseName">
+      <Position>2</Position>
+      <DataType>varchar(20)|0s</DataType>
+    </column>
+    <column id="354" parent="332" name="days">
+      <Position>3</Position>
+      <DataType>varchar(15)|0s</DataType>
+    </column>
+    <column id="355" parent="332" name="beginTime">
+      <Position>4</Position>
+      <DataType>varchar(10)|0s</DataType>
+    </column>
+    <column id="356" parent="332" name="endTime">
+      <Position>5</Position>
+      <DataType>varchar(10)|0s</DataType>
+    </column>
+    <column id="357" parent="332" name="instructor">
+      <Position>6</Position>
+      <DataType>varchar(20)|0s</DataType>
+    </column>
+    <key id="358" parent="332" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>insertID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="359" parent="333" name="userID">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="360" parent="333" name="email">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="345" parent="331" name="fName">
+    <column id="361" parent="333" name="fName">
       <Position>3</Position>
       <DataType>varchar(15)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="346" parent="331" name="lName">
+    <column id="362" parent="333" name="lName">
       <Position>4</Position>
       <DataType>varchar(25)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="347" parent="331" name="password">
+    <column id="363" parent="333" name="password">
       <Position>5</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="348" parent="331" name="PRIMARY">
+    <column id="364" parent="333" name="userType">
+      <Position>6</Position>
+      <DataType>varchar(15)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="365" parent="333" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>userID
 email</ColNames>
