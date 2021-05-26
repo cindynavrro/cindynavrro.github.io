@@ -59,7 +59,7 @@ class DbService {
 
     async getStudentSchedule(){
         try {
-            const response2 = await new Promise((resolve, reject) => {
+            const response3 = await new Promise((resolve, reject) => {
                 const query = "SELECT * FROM studentSchedule";
                 connection.query(query, (err, result) => {
                     if (err) reject(new Error(err.message));
@@ -67,7 +67,7 @@ class DbService {
                 })
             });
             //console.log(response)
-            return response2;
+            return response3;
         } catch (error) {
             console.log(error);
         }

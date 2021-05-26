@@ -67,26 +67,28 @@ app.get('/getAll', (request, response) => {
 })
 
 app.get('/getShoppingCart', (request, response) => {
-    console.log('shop');
+    //console.log('shop');
     const db = dbService.getDbServiceInstance();
     const result = db.getShoppingCart();
 
-    // result.then(function (result){
-    //     console.log(result);
-    // })
     result
         .then(data => response.json({data: data}))
         .catch(err => console.log(err));
 })
 
-// app.get('/getStudentSchedule', (request, response) => {
-//     const db = dbService.getDbServiceInstance();
-//     const result = db.getStudentSchedule();
-//
-//     result
-//         .then(data => response.json({data: data}))
-//         .catch(err => console.log(err));
-// })
+app.get('/getStudentSchedule', (request, response) => {
+    //console.log('schedule');
+    const db = dbService.getDbServiceInstance();
+    const result = db.getStudentSchedule();
+
+    // result.then(function (result){
+    //     console.log(result);
+    // })
+
+    result
+        .then(data => response.json({data: data}))
+        .catch(err => console.log(err));
+})
 
 //delete
 app.delete('/delete/:id', (request, response) => {

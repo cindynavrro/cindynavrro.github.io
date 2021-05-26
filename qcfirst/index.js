@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
     fetch('http://localhost:5000/getShoppingCart')
         .then(response => response.json())
         .then(data => loadShoppingCart(data['data']));
-    // fetch('http://localhost:5000/getStudentSchedule')
-    //     .then(response => response.json())
-    //     .then(data => loadSchedule(data['data']));
+    fetch('http://localhost:5000/getStudentSchedule')
+        .then(response => response.json())
+        .then(data => loadSchedule(data['data']));
 });
 
 
@@ -131,24 +131,6 @@ document.querySelector(".enroll-btn").addEventListener('click', function (event)
             .then(data => insertRowIntoTable(data['data']));
     }
 
-//
-// function loadSchedule(data) {
-//     const table = document.querySelector('#table-body');
-//     if(data.length === 0){
-//         table.innerHTML = "<tr><td class='no-data' colspan='3'>No Data</td></tr>";
-//         return;
-//     }
-//     let tableHTML = "";
-//
-//     data.forEach(function ({courseID, courseName, days, beginTime, endTime}) {
-//         tableHTML += "<tr>";
-//         tableHTML += `<td>${courseName}</td>`;
-//         tableHTML += `<td>${days}</td>`;
-//         tableHTML += `<td>${beginTime}-${endTime}</td>`;
-//         tableHTML += "</tr>";
-//     });
-//     table.innerHTML = tableHTML;
-// }
 function loadHTMLTable(data) {
     const table = document.querySelector('#table-body');
     if(data.length === 0){
@@ -200,6 +182,23 @@ function loadShoppingCart(data){
     table.innerHTML = tableHTML;
 }
 
+function loadSchedule(data) {
+    const table = document.querySelector('#student-table-body');
+    if(data.length === 0){
+        table.innerHTML = "<tr><td class='no-data' colspan='3'>No Data</td></tr>";
+        return;
+    }
+    let tableHTML = "";
+
+    data.forEach(function ({courseID, courseName, days, beginTime, endTime}) {
+        tableHTML += "<tr>";
+        tableHTML += `<td>${courseName}</td>`;
+        tableHTML += `<td>${days}</td>`;
+        tableHTML += `<td>${beginTime}-${endTime}</td>`;
+        tableHTML += "</tr>";
+    });
+    table.innerHTML = tableHTML;
+}
 
 
 function getCheckedValues() {
