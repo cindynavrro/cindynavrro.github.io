@@ -68,8 +68,8 @@ app.get('/getAll', (request, response) => {
 
 app.get('/getShoppingCart', (request, response) => {
     //console.log('shop');
-    const db = dbService.getDbServiceInstance();
-    const result = db.getShoppingCart();
+    const db2 = dbService.getDbServiceInstance();
+    const result = db2.getShoppingCart();
 
     result
         .then(data => response.json({data: data}))
@@ -91,11 +91,11 @@ app.get('/getStudentSchedule', (request, response) => {
 })
 
 //delete
-app.delete('/delete/:id', (request, response) => {
-    const { id } = request.params;
+app.delete('/delete/:name', (request, response) => {
+    const { name } = request.params;
 
     const  db = dbService.getDbServiceInstance();
-    const result = db.deleteRowByID(id);
+    const result = db.deleteRowByName(name);
     // result
     //     .then(data => response.json({success: true}))
     //     .catch(err => console.log(err));

@@ -144,23 +144,19 @@ class DbService {
         }
     }
 
-    async deleteRowByID(id) {
-        id = parseInt(id);
+    async deleteRowByName(name) {
         try{
-            const response = await new Promise((resolve, reject) => {
-                const query = "DELETE from course where courseID = ? ";
-                connection.query(query, [id], (err, result) => {
+            const response4 = await new Promise((resolve, reject) => {
+                const query = "DELETE from shoppingCart where courseName = ? ";
+                connection.query(query, [name], (err, result) => {
                         if (err) reject(new Error(err.message));
                         resolve(result);
                     })
             });
-            console.log(response);
+            console.log(response4);
         } catch (error) {
             console.log(error);
         }
-
-
-
     }
 
 }
