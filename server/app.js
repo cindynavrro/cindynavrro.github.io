@@ -25,6 +25,26 @@ app.post('/insert', (request, response) => {
 
 });
 
+app.post('/shoppingCart', (request, response) => {
+    const { cID, cName, cDays, beginT, endT } = request.body
+    const db = dbService.getDbServiceInstance();
+    const result = db.insertToShopping(cID, cName, cDays, beginT, endT);
+
+    result
+        .then(data => response.json({data: data}))
+        .catch(err => console.log(err));
+});
+
+app.post('/studentSchedule', (request, response) => {
+    const { cName, cDays, beginT, endT } = request.body
+    const db = dbService.getDbServiceInstance();
+    const result = db.insertToSchedule(cName, cDays, beginT, endT);
+
+    result
+        .then(data => response.json({data: data}))
+        .catch(err => console.log(err));
+});
+
 let i = 1;
 //read
 app.get('/getAll', (request, response) => {
@@ -45,6 +65,28 @@ app.get('/getAll', (request, response) => {
         .then(data => response.json({data: data}))
         .catch(err => console.log(err));
 })
+
+app.get('/getShoppingCart', (request, response) => {
+    console.log('shop');
+    const db = dbService.getDbServiceInstance();
+    const result = db.getShoppingCart();
+
+    // result.then(function (result){
+    //     console.log(result);
+    // })
+    result
+        .then(data => response.json({data: data}))
+        .catch(err => console.log(err));
+})
+
+// app.get('/getStudentSchedule', (request, response) => {
+//     const db = dbService.getDbServiceInstance();
+//     const result = db.getStudentSchedule();
+//
+//     result
+//         .then(data => response.json({data: data}))
+//         .catch(err => console.log(err));
+// })
 
 //delete
 app.delete('/delete/:id', (request, response) => {

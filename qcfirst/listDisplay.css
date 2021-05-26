@@ -13,6 +13,9 @@
     border-bottom: 2px solid white;
 
 }
+#classListDisplay-table{
+    margin-bottom: 20px;
+}
 .header-row{
     text-transform: uppercase;
     background-color: white;
@@ -27,6 +30,9 @@ td{
 
 th{
     padding: 10px;
+}
+tr:hover{
+   background: antiquewhite;
 }
 
 .searchBtns{
@@ -45,4 +51,25 @@ th{
     font-size: medium;
     border-radius: 4px;
     color: white;
+}
+
+.status{
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: forestgreen;
+    font-size: large;
+}
+
+.add-cart-btn{
+    background-color: darkred;
+    padding: 3px;
+    text-transform: uppercase;
+    font-size: medium;
+    border-radius: 4px;
+    color: white;
+}
+
+.add-cart-btn:hover{
+    background-color: white;
+    color: darkred;
 }

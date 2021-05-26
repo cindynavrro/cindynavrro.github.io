@@ -1,7 +1,7 @@
 <?php
 include("menuHeaderS.php");
 session_start();
-$user = $_SESSION["userEmail"];
+//$user = $_SESSION["userEmail"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,8 +17,7 @@ $user = $_SESSION["userEmail"];
     <h1>CUNYFIRST</h1>
 </div>
 <?php
-echo "<script>console.log('.$user.');</script>";
-echo $user;
+//echo "<script>console.log('.$user.');</script>";
 ?>
 <h2>Student</h2>
 <div class="container" onclick="">
@@ -34,9 +33,8 @@ echo $user;
                 <th>Course</th>
                 <th>Day</th>
                 <th>Time</th>
-                <th>Instructor</th>
             </tr>
-            <tbody id="table-body">
+            <tbody id="student-table-body">
 
             </tbody>
             </tr>
@@ -51,6 +49,7 @@ echo $user;
 </body>
 
 </html>
+<script src="index.js"></script>
 <?php
 include_once ("footer.php");
 ?>

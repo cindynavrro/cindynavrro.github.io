@@ -1,13 +1,13 @@
 <?php
 include ("menuHeaderS.php");
 session_start();
-$user = $_SESSION["userEmail"];
+//$user = $_SESSION["userEmail"];
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Enrollment Page</title>
-    <meta name="viewport" content="width = device-width, initial scale= 1">
+    <meta name="viewport" content="width = device-width, initial-scale= 1">
     <link rel="stylesheet" href="myStyle.css">
     <link rel="stylesheet" href="enrollmentPage.css">
 </head>
@@ -17,8 +17,7 @@ $user = $_SESSION["userEmail"];
     <h1>CUNYFirst</h1>
 </div>
 <?php
-echo "<script>console.log('.$user.');</script>";
-echo $user;
+//echo "<script>console.log('.$user.');</script>";
 ?>
 <h2>Student</h2>
 <div class="container" onclick="myFunction(this)">
@@ -55,59 +54,23 @@ echo $user;
         <button onclick="location.href='classListDisplay.php'" id="enrollSearch">Search</button>
     </div>
     <h3>Ready to Enroll?</h3>
-    <table id="body">
+    <div class="contain">
+    <table id="shoppingTable">
         <div class="title-row">
+            <thead>
             <tr>
                 <th>My Shopping Cart</th>
-                <th>Day/Time</th>
-                <th colspan="2">Instructor</th>
+                <th>Day</th>
+                <th>Time</th>
+                <th colspan="3">Instructor</th>
             </tr>
+            </thead>
         </div>
-        <tr>
-            <td>CS355</td>
-            <td>M/W 12:00pm-1:15pm</td>
-            <td>Dave Schoul</td>
-            <th>
-                <label class="checkbox-cntr">
-                    <input type="checkbox">
-                    <span class="newBox"></span>
-                </label>
-            </th>
-        </tr>
-        <tr>
-            <td>CS331</td>
-            <td>T/TH 12:00pm-1:15pm</td>
-            <td>Jessy Jones</td>
-            <th>
-                <label class="checkbox-cntr">
-                    <input type="checkbox">
-                    <span class="newBox"></span>
-                </label>
-            </th>
-        </tr>
-        <tr>
-            <td>CS3205</td>
-            <td>F 12:00pm-3:00pm</td>
-            <td>Nancy Carter</td>
-            <th>
-                <label class="checkbox-cntr">
-                    <input type="checkbox">
-                    <span class="newBox"></span>
-                </label>
-            </th>
-        </tr>
-        <tr>
-            <td>CS313</td>
-            <td>M/W 1:00pm-2:15pm</td>
-            <td>Jerry Tombsome</td>
-            <th>
-                <label class="checkbox-cntr">
-                    <input type="checkbox">
-                    <span class="newBox"></span>
-                </label>
-            </th>
-        </tr>
+        <tbody id="shop-table-body">
+
+        </tbody>
     </table>
+    </div>
     <div class="btns">
         <form  action="">
             <input id="enrollBtn" type="submit" value="Enroll">
@@ -118,6 +81,7 @@ echo $user;
     </div>
 </div>
 </body>
+<script src="index.js"></script>
 
 </html>
 <?php

@@ -41,6 +41,83 @@ class DbService {
         }
     }
 
+    async getShoppingCart(){
+        try {
+            const response2 = await new Promise((resolve, reject) => {
+                const query = "SELECT * FROM shoppingCart";
+                connection.query(query, (err, result) => {
+                    if (err) reject(new Error(err.message));
+                    resolve(result);
+                })
+            });
+            //console.log(response)
+            return response2;
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    async getStudentSchedule(){
+        try {
+            const response2 = await new Promise((resolve, reject) => {
+                const query = "SELECT * FROM studentSchedule";
+                connection.query(query, (err, result) => {
+                    if (err) reject(new Error(err.message));
+                    resolve(result);
+                })
+            });
+            //console.log(response)
+            return response2;
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    async insertToShopping(cID, cName, cDays, beginT, endT){
+        cID= parseInt(cID);
+        try{
+            const shoppingID = await new Promise((resolve, reject) => {
+                const query = "INSERT INTO shoppingCart" +
+                    " (courseID, courseName, days, beginTime, endTime)" +
+                    " VALUES (?, ?, ?, ?, ?);";
+                connection.query(query, [cID, cName, cDays, beginT, endT],
+                    (err, result) => {
+                        if (err) reject(new Error(err.message));
+                        resolve(result);
+                    })
+            });
+            console.log(shoppingID);
+            return {
+                id: shoppingID,
+                courseName: cName,
+                days: cDays,
+                beginTime: beginT,
+                endTime: endT
+            };
+        }catch (error){
+            console.log(error)
+        }
+    }
+    async insertToSchedule(cName, cDays, beginT, endT){
+        try{
+            const insertID = await new Promise((resolve, reject) => {
+                const query = "INSERT INTO studentSchedule" +
+                    " (courseName, days, beginTime, endTime)" +
+                    " VALUES (?, ?, ?, ?);";
+                connection.query(query, [cName, cDays, beginT, endT],
+                    (err, result) => {
+                        if (err) reject(new Error(err.message));
+                        resolve(result);
+                    })
+            });
+            console.log(insertID);
+            return insertID;
+
+        }catch (error){
+            console.log(error)
+        }
+    }
+
     async insertNewCourse(term, department, name, description, beginTime, endTime, days, capacity) {
         try {
             const insertID = await new Promise((resolve, reject) => {
@@ -81,6 +158,8 @@ class DbService {
         } catch (error) {
             console.log(error);
         }
+
+
 
     }
 

@@ -19,7 +19,6 @@ $user = $_SESSION["userEmail"];
 <div>
     <?php
     echo "<script>console.log('.$user.');</script>";
-    echo $user;
     ?>
     <h2>Student</h2>
 </div>
@@ -32,6 +31,7 @@ $user = $_SESSION["userEmail"];
 </div>
 <div id="classListDisplay-table" style="display: flex; justify-content: center">
     <table>
+        <thead>
         <tr class="header-row">
             <th>Class</th>
             <th>Day</td>
@@ -39,6 +39,7 @@ $user = $_SESSION["userEmail"];
             <th>Instructor</th>
             <th colspan="3">Status</th>
         </tr>
+        </thead>
         <tbody id="table-body">
 
         </tbody>
@@ -48,6 +49,7 @@ $user = $_SESSION["userEmail"];
 </body>
 
 </html>
+<script src="index.js"></script>
 
 <?php
 include ("footer.php");

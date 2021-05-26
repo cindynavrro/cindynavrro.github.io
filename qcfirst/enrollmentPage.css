@@ -124,15 +124,25 @@ button{
     color: white;
 }
 
-#enrollBtn:hover{
+.enroll-btn:hover{
     background-image: linear-gradient(lightgreen, white);
     color: darkgreen;
 }
-#deleteBtn:hover{
+.delete-btn:hover{
     color: darkred;
     background-image: linear-gradient(red,white);
 }
 
+.contain{
+    display: flex;
+    justify-content: center;
+}
 
-
+.enroll-btn, .delete-btn{
+    background-color: lightgray;
+    text-transform: uppercase;
+    font-size: medium;
+    border-radius: 4px;
+    color: white;
+}
 
