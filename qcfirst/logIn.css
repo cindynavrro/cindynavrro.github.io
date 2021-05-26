@@ -1,95 +1,106 @@
 /*
 Cindy - working on homepage appearance
  */
-body{
-   font-family: Menlo;
+body {
+  font-family: Menlo;
 }
 
 .logo-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-header{
-    display: flex;
-    justify-content: center;
-    font-size: xx-large;
-    color: white;
-    background-image: linear-gradient(darkred,lightcoral, #dc3e49, lightcoral, darkred);
-    border-radius: 5px;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+header {
+  display: flex;
+  justify-content: center;
+  font-size: xx-large;
+  color: white;
+  background-image: linear-gradient(
+    darkred,
+    lightcoral,
+    #dc3e49,
+    lightcoral,
+    darkred
+  );
+  border-radius: 5px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
-.box-container{
-    background: antiquewhite;
-    opacity: 90%;
-    box-shadow: 2px 0px 20px #dc3e49;
-    height: auto;
-    padding: 50px;
-    margin: 20px;
-    display: flex;
-    border-radius: 20px;
-    justify-content: center;
+.box-container {
+  background: antiquewhite;
+  opacity: 90%;
+  box-shadow: 2px 0px 20px #dc3e49;
+  height: auto;
+  padding: 50px;
+  margin: 20px;
+  display: flex;
+  border-radius: 20px;
+  justify-content: center;
 }
 
 .logIn-container h2 {
-    display: flex;
-    color: #dc3e49;
-    justify-content: center;
-    font-size: xx-large;
+  display: flex;
+  color: #dc3e49;
+  justify-content: center;
+  font-size: xx-large;
 }
 
-.usrName-field{
-    display: flex;
-    justify-content: center;
-    padding: 5px;
+.usrName-field {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
 }
 
 .psw-field {
-    display: flex;
-    justify-content: center;
-    padding: 5px;
-
+  display: flex;
+  justify-content: center;
+  padding: 5px;
 }
 
-.logIn-btn{
-    display: flex;
-    justify-content: center;
+.logIn-btn {
+  display: flex;
+  justify-content: center;
 }
 .btn {
-    background-color: #dc3e49;
-    border-radius: none;
-    color: white;
-    margin-top: 10px;
-    font-family: Menlo;
-    font-size: 15px;
-    padding: 10px 30px;
-    border-radius: 10px;
+  background-color: #dc3e49;
+  border-radius: none;
+  color: white;
+  margin-top: 10px;
+  font-family: Menlo;
+  font-size: 15px;
+  padding: 10px 30px;
+  border-radius: 10px;
 }
 
-.btn:hover{
-    color: #dc3e49;
-    box-shadow: inset 400px 0 0 0 white;
-    -webkit-transition: ease-out 0.6s;
-    -moz-transition: ease-out 0.6s;
-    transition: ease-out 0.6s;
-
+p span {
+  display: flex;
+  justify-content: center;
 }
 
-.signUp-container{
-    display: flex;
-    justify-content: center;
-}
-.forgotpsw-container{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+.btn:hover {
+  color: #dc3e49;
+  box-shadow: inset 400px 0 0 0 white;
+  -webkit-transition: ease-out 0.6s;
+  -moz-transition: ease-out 0.6s;
+  transition: ease-out 0.6s;
 }
 
-.logIn-container input{
-    background-color: antiquewhite;
-    padding: 5px;
-    margin-left: 10px;
-    border: none;
-    border-bottom: 2px solid red;
+.signUp-container {
+  display: flex;
+  justify-content: center;
+}
+
+.forgotpsw-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.logIn-container input {
+  background-color: antiquewhite;
+  padding: 5px;
+  margin-left: 10px;
+  border: none;
+  border-bottom: 2px solid red;
 }

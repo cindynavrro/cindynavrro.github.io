@@ -1,75 +1,84 @@
-.title{
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    font-size: large;
-    text-transform: uppercase;
+.title {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: large;
+  text-transform: uppercase;
+}
+body{
+  background: url("qc-campus.jpg") center;
+  background-size: cover;
 }
 
-#body table tr, td{
-    padding: 20px;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
-
+#body table tr,
+td {
+  padding: 20px;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
 }
-#classListDisplay-table{
-    margin-bottom: 20px;
+#classListDisplay-table {
+  margin-bottom: 20px;
 }
-.header-row{
-    text-transform: uppercase;
-    background-color: white;
+.header-row {
+  text-transform: uppercase;
+  background-color: white;
 }
-.header-row th{
-    color: darkred;
-}
-
-td{
-    font-size: small;
+.header-row th {
+  color: darkred;
 }
 
-th{
-    padding: 10px;
-}
-tr:hover{
-   background: antiquewhite;
+h1 a {
+  text-decoration: none;
+  color: white;
 }
 
-.searchBtns{
-    display: flex;
-    justify-content: center;
+td {
+  font-size: small;
 }
 
-.btn{
-    border-radius: 10px;
+th {
+  padding: 10px;
 }
-.searchBtns input{
-    background-color: lightgray;
-    padding: 10px;
-    margin: 10px;
-    text-transform: uppercase;
-    font-size: medium;
-    border-radius: 4px;
-    color: white;
+tr:hover {
+  background: antiquewhite;
 }
 
-.status{
-    text-transform: uppercase;
-    font-weight: bolder;
-    color: forestgreen;
-    font-size: large;
+.searchBtns {
+  display: flex;
+  justify-content: center;
 }
 
-.add-cart-btn{
-    background-color: darkred;
-    padding: 3px;
-    text-transform: uppercase;
-    font-size: medium;
-    border-radius: 4px;
-    color: white;
+.btn {
+  border-radius: 10px;
+}
+.searchBtns input {
+  background-color: lightgray;
+  padding: 10px;
+  margin: 10px;
+  text-transform: uppercase;
+  font-size: medium;
+  border-radius: 4px;
+  color: white;
 }
 
-.add-cart-btn:hover{
-    background-color: white;
-    color: darkred;
+.status {
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: forestgreen;
+  font-size: large;
+}
+
+.add-cart-btn {
+  background-color: darkred;
+  padding: 3px;
+  text-transform: uppercase;
+  font-size: medium;
+  border-radius: 4px;
+  color: white;
+}
+
+.add-cart-btn:hover {
+  background-color: white;
+  color: darkred;
 }

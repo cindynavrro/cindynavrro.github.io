@@ -6,36 +6,72 @@
     <link rel="stylesheet" href="myStyle.css">
     <link rel="stylesheet" href="listDisplay.css">
 </head>
-
+<header>
+    <link rel="stylesheet" href="menuButton.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="menuBtns">
+        <button class="Homebtn" onclick="location.href='studentHome.php'"><i class="fa fa-home"></i></button>
+        <button class="logoutBtno" name="'logout" formmethod="post" onclick="location.href='login.php'""><i class="fa fa-close"></i></button>
+    </div>
+</header>
 <body>
-    <div class="header-ctnr">
-        <h1>CUNYFirst</h1>
-    </div>
-    <div>
-        <h2>Student</h2>
-    </div>
-    <h3>Class Search</h3>
+<div class="header-ctnr">
+    <h1>CUNYFirst</h1>
+</div>
+<div>
+    <h2>Student</h2>
+</div>
+<h3>Class Search</h3>
 
-    <div class="searchBtns">
-        <form  action="enrollmentPage.html">
-            <input type="submit" value="New Search">
-        </form>
-    </div>
-    <div id="classListDisplay-table" style="display: flex; justify-content: center">
-        <table>
-            <tr class="header-row">
-                <th>Class</th>
-                <th>Day</td>
-                <th>Time</th>
-                <th>Instructor</th>
-                <th colspan="3">Status</th>
-            </tr>
-            <tbody id="table-body">
+<div class="searchBtns">
+    <form  action="enrollmentPage.php">
+        <input type="submit" value="New Search">
+    </form>
+</div>
+<div id="classListDisplay-table" style="display: flex; justify-content: center">
+    <table>
+        <thead>
+        <tr class="header-row">
+            <th>Class</th>
+            <th>Day</td>
+            <th>Time</th>
+            <th>Instructor</th>
+            <th colspan="3">Status</th>
+        </tr>
+        </thead>
+        <tbody id="table-body">
 
-            </tbody>
-        </table>
+        </tbody>
+    </table>
+</div>
+<link rel="stylesheet" href="footer.css">
+<footer class="site-footer">
+    <div class="foot-container">
+        <div class="row">
+            <img style="width: 20%" id="img" src="qc-logo2.svg">
+            <div class="col-sm-12 col-md-6">
+                <h6>About</h6>
+                <p class="text-justify">QCFirst Spring2021, CS355</p>
+                <p> Internet & Web Tech</p>
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <h6>Quick Links</h6>
+                <ul class="footer-links">
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
     </div>
-
+    <div class="foot-container">
+        <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by Cindy</p>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 
 </html>

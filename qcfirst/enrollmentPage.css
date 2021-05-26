@@ -1,148 +1,152 @@
-#body table tr, td{
-    padding: 15px;
+#body table tr,
+td {
+  padding: 15px;
 }
 
 table {
-    border-radius: 3px;
+  border-radius: 3px;
 }
 
 th {
-    background-color: white;
-    padding: 8px;
-    text-transform: uppercase;
+  background-color: white;
+  padding: 8px;
+  text-transform: uppercase;
 }
 
-#title{
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    font-size: large;
-    text-transform: uppercase;
+h1 a {
+  text-decoration: none;
+  color: white;
 }
 
-td{
-    font-size: small;
-    padding-left: 25px;
-    padding-right: 25px;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
-
+#title {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: large;
+  text-transform: uppercase;
 }
 
-tr:hover{
-    background-color: white;
-    color: darkred;
-    font-weight: bold;
+td {
+  font-size: small;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
 }
 
-.checkbox-cntr{
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 20px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+tr:hover {
+  background-color: white;
+  color: darkred;
+  font-weight: bold;
 }
 
-.checkbox-cntr input{
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
+.checkbox-cntr {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.newBox{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: lightgray;
-    border-radius: 10px;
+.checkbox-cntr input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.newBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: lightgray;
+  border-radius: 10px;
 }
 
 .checkbox-cntr:hover input ~ .newBox {
-    background-color: white;
-    transform: scale(1.25);
+  background-color: white;
+  transform: scale(1.25);
 }
 
 .checkbox-cntr input:checked ~ .newBox {
-    background-color: lightcoral;
+  background-color: lightcoral;
 }
 
 .newBox:after {
-    content: "";
-    position: absolute;
-    display: none;
+  content: "";
+  position: absolute;
+  display: none;
 }
 
 .checkbox-cntr input:checked ~ .newBox:after {
-    display: block;
+  display: block;
 }
 
 .checkbox-cntr .newBox:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
-
-button{
-    background-color: darkred;
-    padding: 3px;
-    text-transform: uppercase;
-    font-size: medium;
-    border-radius: 4px;
-    color: white;
+button {
+  background-color: darkred;
+  padding: 3px;
+  text-transform: uppercase;
+  font-size: medium;
+  border-radius: 4px;
+  color: white;
 }
 
-.btns{
-    display: flex;
-    justify-content: center;
-    padding: 10px;
+.btns {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
 }
 
-.btns input{
-    background-color: lightgray;
-    padding: 10px;
-    margin: 10px;
-    text-transform: uppercase;
-    font-size: medium;
-    border-radius: 4px;
-    color: white;
+.btns input {
+  background-color: lightgray;
+  padding: 10px;
+  margin: 10px;
+  text-transform: uppercase;
+  font-size: medium;
+  border-radius: 4px;
+  color: white;
 }
 
-.enroll-btn:hover{
-    background-image: linear-gradient(lightgreen, white);
-    color: darkgreen;
+.enroll-btn:hover {
+  background-image: linear-gradient(lightgreen, white);
+  color: darkgreen;
 }
-.delete-btn:hover{
-    color: darkred;
-    background-image: linear-gradient(red,white);
-}
-
-.contain{
-    display: flex;
-    justify-content: center;
+.delete-btn:hover {
+  color: darkred;
+  background-image: linear-gradient(red, white);
 }
 
-.enroll-btn, .delete-btn{
-    background-color: lightgray;
-    text-transform: uppercase;
-    font-size: medium;
-    border-radius: 4px;
-    color: white;
+.contain {
+  display: flex;
+  justify-content: center;
 }
 
+.enroll-btn,
+.delete-btn {
+  background-color: lightgray;
+  text-transform: uppercase;
+  font-size: medium;
+  border-radius: 4px;
+  color: white;
+}

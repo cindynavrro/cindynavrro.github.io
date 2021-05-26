@@ -11,4 +11,3 @@ if(isset($_POST['logout']))
     <button class="Homebtn" onclick="location.href='studentHome.php'"><i class="fa fa-home"></i></button>
     <button class="logoutBtno" name="'logout" formmethod="post" onclick="location.href='login.php'""><i class="fa fa-close"></i></button>
 </div>
-

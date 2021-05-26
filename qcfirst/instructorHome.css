@@ -1,78 +1,83 @@
-#body table tr, td{
-    padding: 15px;
+#body table tr,
+td {
+  padding: 15px;
 }
 
-body{
-    background: url("qc-campus.jpg") center;
-    background-size: cover;
+body {
+  background: url("qc-campus.jpg") center;
+  background-size: cover;
 }
 table {
-    border: 2px solid white;
-    border-radius: 3px;
+  border: 2px solid white;
+  border-radius: 3px;
 }
 
-tbody{
-    text-align: center;
+tbody {
+  text-align: center;
 }
 
 th {
-    background-color: white;
-    padding: 8px;
-    text-transform: uppercase;
+  background-color: white;
+  padding: 8px;
+  text-transform: uppercase;
 }
 
-#title{
-     padding: 10px;
-     display: flex;
-     justify-content: center;
-     margin-top: 10px;
-     font-size: large;
-     text-transform: uppercase;
- }
-
-td{
-    font-size: small;
-    padding-left: 25px;
-    padding-right: 25px;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
-
+h1 a {
+  text-decoration: none;
+  color: white;
 }
 
-tr:hover{
-    background-color: white;
-    color: darkred;
-    transition: all .2s ease-in-out;
-    transform: scale(1.1);
-    font-weight: bold;
+#title {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: large;
+  text-transform: uppercase;
 }
 
-.btns{
-    display: flex;
-    justify-content: center;
-    padding: 10px;
+td {
+  font-size: small;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
 }
 
-#managebtn{
-    padding: 10px 25px;
-    background-color: white;
-    color: black;
-    border-radius: 3px;
-    text-transform: lowercase;
+tr:hover {
+  background-color: white;
+  color: darkred;
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.1);
+  font-weight: bold;
 }
 
-#hidden-btns{
-    display: flex;
-    justify-content: center;
+.btns {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+#managebtn {
+  padding: 10px 25px;
+  background-color: white;
+  color: black;
+  border-radius: 3px;
+  text-transform: lowercase;
+}
+
+#hidden-btns {
+  display: flex;
+  justify-content: center;
 }
 
 .btn {
-    background-color: lightgray;
-    padding: 10px;
-    margin: 15px;
-    text-transform: lowercase;
+  background-color: lightgray;
+  padding: 10px;
+  margin: 15px;
+  text-transform: lowercase;
 }
 
-.btn:hover{
-    transform: rotate(5deg);
+.btn:hover {
+  transform: rotate(5deg);
 }
